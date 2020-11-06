@@ -1,0 +1,67 @@
+.d3 {
+  transition: all .08s linear;
+  position: relative;
+  outline: medium none;
+  -moz-outline-style: none;
+  border: 0;
+  margin-right: 10px;
+  margin-top: 15px;
+  font-family: "Operator Mono",webfont!important
+}
+.d3:focus {
+  outline: medium none;
+  -moz-outline-style: none
+}
+.d3:active {
+  top: 9px
+}
+.btn.default {
+  box-shadow: 0 0 0 1px #ebebeb inset,0 0 0 2px rgba(255,255,255,.15) inset,0 8px 0 0 #adadad,0 8px 0 1px rgba(0,0,0,.4),0 8px 8px 1px rgba(0,0,0,.5);
+  background-color: #fff;
+  color: #333
+}
+.btn.primary {
+  box-shadow: 0 0 0 1px #428bca inset,0 0 0 2px rgba(255,255,255,.15) inset,0 8px 0 0 #357ebd,0 8px 0 1px rgba(0,0,0,.4),0 8px 8px 1px rgba(0,0,0,.5);
+  background-color: #428bca
+}
+.btn.success {
+  box-shadow: 0 0 0 1px #5cb85c inset,0 0 0 2px rgba(255,255,255,.15) inset,0 8px 0 0 #4cae4c,0 8px 0 1px rgba(0,0,0,.4),0 8px 8px 1px rgba(0,0,0,.5);
+  background-color: #5cb85c
+}
+.btn.info {
+  box-shadow: 0 0 0 1px #5bc0de inset,0 0 0 2px rgba(255,255,255,.15) inset,0 8px 0 0 #46b8da,0 8px 0 1px rgba(0,0,0,.4),0 8px 8px 1px rgba(0,0,0,.5);
+  background-color: #5bc0de
+}
+.btn.warning {
+  box-shadow: 0 0 0 1px #f0ad4e inset,0 0 0 2px rgba(255,255,255,.15) inset,0 8px 0 0 #eea236,0 8px 0 1px rgba(0,0,0,.4),0 8px 8px 1px rgba(0,0,0,.5);
+  background-color: #f0ad4e
+}
+.btn.danger {
+  box-shadow: 0 0 0 1px #c63702 inset,0 0 0 2px rgba(255,255,255,.15) inset,0 8px 0 0 #c24032,0 8px 0 1px rgba(0,0,0,.4),0 8px 8px 1px rgba(0,0,0,.5);
+  background-color: #c63702
+}
+#ace {
+  height: 500px;
+  width: 100%;
+  border-radius: 3px;
+  font-family: "Operator Mono";
+  font-size: 17px;
+  line-height: 30px;
+  transition: all .08s linear;
+  position: relative;
+  outline: medium none;
+  -moz-outline-style: none;
+  border: 0;
+  margin-bottom: 30px;
+  margin-top: 15px;
+  box-shadow: 0 0 0 1px #428bca inset,0 0 0 2px rgba(255,255,255,.15) inset,0 -6px 0 0 #357ebd,0 10px 0 0 #357ebd,2px 0 0 0 #357ebd,-2px 0 0 0 #357ebd,0 8px 0 1px rgba(0,0,0,.4),0 8px 8px 1px rgba(0,0,0,.5)
+}
+.ace.console {
+  background-color: #000;
+  min-height: 40px;
+  border-radius: 3px;
+  border: 1px inset #000;
+  margin: 30px 0;
+  color: #eee;
+  padding: 20px
+}
