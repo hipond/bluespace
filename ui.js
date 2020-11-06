@@ -1,7 +1,8 @@
 // v1.0.1
 gh = {};
 gh.host = "";
-gh.cdnHost = "";
+gh.cdnPublicRoot = "";
+gh.cdnImgRoot = "";
 gh.uniqid = 0;
 gh.kvMap = {};
 gh.regex = {};
@@ -48,7 +49,7 @@ gh.path = function(path) {
     return gh.host + path;
 }
 gh.cdn = function(path) {
-    return gh.cdnHost + path;
+    return gh.cdnPublicRoot + path;
 }
 gh.alert = function(message, timeout, fn, type) {
     Messenger.options = {
@@ -217,10 +218,10 @@ gh.data = function(element) {
         if (error) {
             return;
         }
-        var $textarea = $(this);
-        var key = $textarea.attr('name');
-        if ($textarea.hasClass('editor')) {
-            var editorId = $textarea.attr('editor') || null;
+        var $area = $(this);
+        var key = $area.attr('name');
+        if ($area.hasClass('editor')) {
+            var editorId = $area.attr('editor') || null;
             if (!editorId) {
                 gh.alert("error.editor.id");
                 return error++;
@@ -230,14 +231,13 @@ gh.data = function(element) {
                 gh.alert("error.editor.object");
                 return error++;
             }
-            editor.sync();
-            if (editor.getContentTxt().length < 3) {
+            if (editor.getLength() < 3) {
                 gh.alert("内容字数过少，请完善内容");
                 return error++;
             }
-            data[key] = editor.getContent();
+            data[key] = editor.root.innerHTML;
         } else {
-            data[key] = $textarea.val();
+            data[key] = $area.val();
         }
     });
     if (error) {
@@ -313,8 +313,91 @@ gh.load = function(url, fn, options) {
     });
 }
 gh.fn('editor', function(options) {
-    var $textarea = $('#'+options.element);
-    var editor = UE.getEditor(options.element);
+    var $textarea = $(options.element);
+    $textarea.after("<input class='upload image hide' type='file' name='file'/>");
+    var $fileInput = $textarea.next('input.upload.image');
+    var colors = ['#ab2b2b', '#069', '#337d56', '#9d5b8b', '#dcb183', '#f0f0f0', '#000'];
+    var editor = new Quill(options.element, {
+        placeholder: '正文内容...',
+        modules: {
+            toolbar: [
+                { header: 1 }, { header: 2 },
+                { color: colors },
+                'bold', 'italic', 'underline',
+                { 'align': [] },
+                'image',
+                { list: 'ordered' },
+                { list: 'bullet' },
+                { 'script': 'sub' }, { 'script': 'super' },
+                'code-block',
+                'clean'
+            ],
+            uploader: false,
+        },
+        theme: 'snow'
+    });
+    editor.getModule("toolbar").addHandler("image", function(e) {
+        if (e) {
+            $fileInput.click();
+        } else {
+            editor.format('image', false);
+        }
+    });
+
+    editor.root.addEventListener('paste', function(e) {
+        e.preventDefault();
+        if (e.clipboardData && e.clipboardData.files && e.clipboardData.files.length) {
+            $.each(e.clipboardData.files, function(i, file) {
+                if (!file.type.match(/^image\/(gif|jpe?g|a?png|bmp)/i)) {
+                    cosole.log(file);
+                    return;
+                }
+                uploadImage(file);
+            });
+        }
+
+    }, false);
+
+    editor.root.addEventListener('drop', function(e) {
+
+        e.preventDefault();
+
+        if (e.dataTransfer && e.dataTransfer.files && e.dataTransfer.files.length) {
+            if (document.caretRangeFromPoint) {
+                var selection = document.getSelection();
+                var range = document.caretRangeFromPoint(e.clientX, e.clientY);
+                if (selection && range) {
+                    selection.setBaseAndExtent(range.startContainer, range.startOffset, range.startContainer, range.startOffset);
+                }
+            }
+            $.each(e.dataTransfer.files, function(i, file) {
+                if (!file.type.match(/^image\/(gif|jpe?g|a?png|bmp)/i)) {
+                    return;
+                }
+                uploadImage(file);
+            });
+        }
+        e.dataTransfer.clearData();
+        return false;
+    }, false);
+
+    // 过滤粘贴数据格式
+    // editor.clipboard.addMatcher(Node.ELEMENT_NODE, function(node, delta) {
+    //     var ops = [];
+    //     $.each(delta.ops, function(k, op) {
+    //         if (op.insert && typeof op.insert === 'string') {
+    //             ops.push({
+    //                 insert: op.insert
+    //             })
+    //         }
+    //     });
+    //     delta.ops = ops
+    //     return delta
+    // })
+
+    $fileInput.on('change', function() {
+        uploadImage();
+    });
 
     function uploadImage(file) {
         if (!file) {
@@ -330,7 +413,7 @@ gh.fn('editor', function(options) {
         data.append("file", file);
         gh.log(data);
         $.ajax({
-            url: options.bucket,
+            url: options.url,
             data: data,
             type: "POST",
             async: false,
@@ -339,7 +422,7 @@ gh.fn('editor', function(options) {
             processData: false,
             dataType: "json",
             success: function(response) {
-                var imageUrl = gh.cdn(response.url + "!content");
+                var imageUrl = gh.cdnImgRoot + response.url + "!content";
                 var pointer = editor.getSelection();
                 var imgRange = 0 + (pointer === null ? 0 : pointer.index);
                 editor.insertEmbed(imgRange, 'image', imageUrl);
@@ -386,7 +469,7 @@ gh.fn('imageUploader', function(options) {
                 processData: false,
                 dataType: "json",
                 success: function(response) {
-                    var url = gh.cdn(response.url + "!content");
+                    var url = gh.cdnImgRoot + response.url + "!content";
                     $element.attr('src', url);
                 },
                 error: function(data) {

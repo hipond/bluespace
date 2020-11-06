@@ -525,6 +525,10 @@ div.p .tag {
 .topics .item .title {
   margin: 0 5px
 }
+#editor,
+.topic .textarea.editor {
+  min-height: 400px
+}
 .g404 {
   background-color: #fff;
   padding: 10px;
@@ -621,8 +625,6 @@ div.p .tag {
   padding: 5px;
   text-indent: 0
 }
-
-
 img.mfp-img {
   background-color: #fff
 }
