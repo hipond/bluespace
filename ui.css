@@ -534,9 +534,11 @@ fieldset {
 .zone.breadcrumb a.first {
     margin: 0;
 }
+
 .zone.breadcrumb a.first i {
     margin-right: 5px;
 }
+
 .zone.breadcrumb a {
     margin: 0 6px;
     color: #777;
@@ -667,6 +669,11 @@ div.p .tag {
     margin: 0 5px;
 }
 
+.topic .textarea.editor,
+#editor {
+    min-height: 400px;
+}
+
 .g404 {
     background-color: #fff;
     padding: 10px;
@@ -700,7 +707,7 @@ div.p .tag {
 }
 
 
-.zone.topic .ease{
+.zone.topic .ease {
     background-color: #fefefe;
 }
 
@@ -797,9 +804,10 @@ img.mfp-img {
     border-radius: 4px;
     padding: 5px;
 }
+
 .zone.comments .userbar {
     background-color: #fcfcfc;
-    border-bottom:1px solid #f5f5f5;
+    border-bottom: 1px solid #f5f5f5;
 }
 
 .zone.comments .comment .content {
@@ -950,9 +958,12 @@ h3.title {
     margin-top: 35px;
 }
 
-.zone.area .ease h3{
+.zone.area .ease h3 {
     margin: 40px 0 10px 0;
     font-size: 20px;
     font-weight: bold;
     text-align: center;
+}
+.edui-editor-bottomContainer.edui-notadd{
+    display: none;
 }
