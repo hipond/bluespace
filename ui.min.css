@@ -240,7 +240,7 @@ th:not([align]) {
   box-shadow: 0 0 3px #aaa;
   padding: 12px;
   background-color: #f7f7f7;
-  border-radius: 2px
+  border-radius: 4px
 }
 .h,
 .hide {
@@ -410,7 +410,7 @@ fieldset {
   margin: 0 auto
 }
 .zone {
-  margin: 15px 0
+  margin: 15px 10px
 }
 .zone.breadcrumb {
   color: #222;
