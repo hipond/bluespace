@@ -152,17 +152,18 @@ th:not([align]) {
 }
 
 .b1 {
-    background-color: #3b7960 !important;
+    background-color: #069 !important;
     color: #f0f0f0 !important;
 }
 
 .b2 {
-    background-color: #00558F !important;
+    background-color: #069 !important;
     color: #f0f0f0 !important;
 }
 
+/*#ab2b2b*/
 .b3 {
-    background-color: #ab2b2b !important;
+    background-color: #069 !important;
     color: #f0f0f0 !important;
 }
 
@@ -419,7 +420,7 @@ textarea {
 
 .btn {
     display: inline-block;
-    background-color: #00558F;
+    background-color: #069;
     box-shadow: 0 0 3px #888 inset;
 
     letter-spacing: 2px;
@@ -481,14 +482,14 @@ fieldset {
     box-shadow: 0 1px 3px #999;
     letter-spacing: 2px;
     background-color: #f2f2f2;
-    border-top: 3px solid #00558F;
+    border-top: 3px solid #069;
     background-image: linear-gradient(to bottom, #fefefe, #f8f8f8);
 }
 
 .header .logo img {
     height: 45px;
-    background-color: #00558F;
-    border-right: 5px solid #00558F;
+    background-color: #069;
+    border-right: 5px solid #069;
 }
 
 .header a {
@@ -748,7 +749,7 @@ div.p .tag {
     color: #eee;
     font-size: 24px;
     font-weight: bold;
-    background-color: #00558F;
+    background-color: #069;
     box-shadow: 0 0 3px #aaa;
     line-height: 30px;
     margin: 0 6px 0 0;
@@ -934,7 +935,7 @@ img.mfp-img {
 }
 
 .zone.optional.description .ease {
-    border-left: 7px solid #00558F;
+    border-left: 7px solid #069;
 }
 
 table th {
