@@ -122,7 +122,7 @@ th:not([align]) {
   color: #f0f0f0!important
 }
 .b2 {
-  background-color: #069!important;
+  background-color: #00558f!important;
   color: #f0f0f0!important
 }
 .b3 {
@@ -328,7 +328,7 @@ textarea {
 }
 .btn {
   display: inline-block;
-  background-color: #069;
+  background-color: #00558f;
   box-shadow: 0 0 3px #888 inset;
   letter-spacing: 2px;
   border-radius: 4px;
@@ -375,13 +375,13 @@ fieldset {
   box-shadow: 0 1px 3px #999;
   letter-spacing: 2px;
   background-color: #f2f2f2;
-  border-top: 3px solid #069;
+  border-top: 3px solid #00558f;
   background-image: linear-gradient(to bottom,#fefefe,#f8f8f8)
 }
 .header .logo img {
   height: 45px;
-  background-color: #069;
-  border-right: 5px solid #069
+  background-color: #00558f;
+  border-right: 5px solid #00558f
 }
 .header a {
   display: block;
@@ -590,7 +590,7 @@ div.p .tag {
   color: #eee;
   font-size: 24px;
   font-weight: 700;
-  background-color: #069;
+  background-color: #00558f;
   box-shadow: 0 0 3px #aaa;
   line-height: 30px;
   margin: 0 6px 0 0
@@ -744,7 +744,7 @@ img.mfp-img {
   margin: 10px 0 20px 0
 }
 .zone.optional.description .ease {
-  border-left: 7px solid #069
+  border-left: 7px solid #00558f
 }
 table th {
   background-color: #eee;
