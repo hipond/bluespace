@@ -484,7 +484,7 @@ gh.fn('imageUploader', function(options) {
 gh.run('com.common', function() {
     $('.zone.breadcrumb a').not(':first').before('|');
     $('a[href=]').removeAttr('href');
-    $('.body.main').css({ "min-height": $(window).height() - 130 });
+    $('.body.main').css({ "min-height": $(window).height() - 160 });
     $('.super').each(function() {
         $(this).appendTo('body');
     });
