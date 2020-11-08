@@ -256,7 +256,7 @@ th:not([align]) {
   clear: both
 }
 body {
-  background-color: #e9e9e9;
+  background-color: #e0e9e0;
   color: #222;
   font-size: 14px;
   font-family: 微软雅黑,Helvetica,Tahoma,SimSun,sans-serif;
@@ -268,7 +268,9 @@ body {
   font-weight: 400;
   font-stretch: normal;
   line-height: 1.5;
-  word-break: break-all
+  word-break: break-all;
+  background-image: url(img/subway-lines.png);
+  background-repeat: repeat
 }
 body a {
   color: #444;
