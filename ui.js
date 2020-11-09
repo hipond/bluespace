@@ -529,9 +529,6 @@ gh.run('com.tab', function() {
                 $items.eq(idx).addClass('on');
             });
         });
-        // init
-        $keys.eq(0).addClass("focus");
-        $items.eq(0).addClass('on');
     });
 
     $(".switch[rel]").on('click', function(e) {
