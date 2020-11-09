@@ -779,7 +779,7 @@ h3.title {
 .zone.boardLogo .box {
   position: absolute;
   top: -15px;
-  right: 30px;
+  right: 10px;
   margin: 0;
   height: 60px
 }
@@ -790,7 +790,7 @@ h3.title {
   height: 100%;
   top: 0;
   left: 0;
-  box-shadow: 1px 6px 20px 15px #e0e4e9 inset
+  box-shadow: 20px 0 20px 0 #e0e4e9 inset,-20px 0 20px 0 #e0e4e9 inset
 }
 .zone.boardLogo img {
   height: 60px
