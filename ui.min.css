@@ -616,7 +616,10 @@ div.p .tag {
   margin: 0;
   line-height: 24px;
   padding: 15px 25px;
-  overflow: hidden
+  overflow: hidden;
+  color: #555;
+  font-size: 16px;
+  line-height: 30px
 }
 .content ol,
 .content ul {
@@ -647,7 +650,15 @@ img.mfp-img {
   padding: 20px 10px;
   overflow: hidden;
   word-break: break-all;
-  background-color: #fefefe
+  background-color: #fefefe;
+  color: #555;
+  font-size: 16px;
+  line-height: 30px
+}
+.gh .ql-editor {
+  color: #555;
+  font-size: 16px;
+  line-height: 30px!important
 }
 .zone.add.comment .textarea {
   height: 120px;

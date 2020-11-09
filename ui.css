@@ -779,6 +779,9 @@ div.p .tag {
     line-height: 24px;
     padding: 15px 25px;
     overflow: hidden;
+    color:#555;
+    font-size: 16px;
+    line-height: 30px;
 }
 
 .content ul,
@@ -818,8 +821,15 @@ img.mfp-img {
     overflow: hidden;
     word-break: break-all;
     background-color: #fefefe;
+    color:#555;
+    font-size: 16px;
+    line-height: 30px;
 }
-
+.gh .ql-editor{
+    color:#555;
+    font-size: 16px;
+    line-height: 30px!important;
+}
 .zone.add.comment .textarea {
     height: 120px;
     line-height: 120px;
