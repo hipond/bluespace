@@ -1,4 +1,15 @@
 @font-face {
+  font-family: 'logo';
+  font-display: swap;
+  src: url('//at.alicdn.com/t/webfont_okdlwdcrzhi.eot'); /* IE9*/
+  src: url('//at.alicdn.com/t/webfont_okdlwdcrzhi.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('//at.alicdn.com/t/webfont_okdlwdcrzhi.woff2') format('woff2'),
+  url('//at.alicdn.com/t/webfont_okdlwdcrzhi.woff') format('woff'), /* chrome、firefox */
+  url('//at.alicdn.com/t/webfont_okdlwdcrzhi.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/webfont_okdlwdcrzhi.svg#站酷高端黑') format('svg'); /* iOS 4.1- */
+}
+
+@font-face {
     font-family: 'webfont';
     font-display: swap;
     src: url('//at.alicdn.com/t/webfont_vhcg99i3guj.eot');
@@ -478,27 +489,47 @@ fieldset {
 }
 
 .header {
-    height: 45px;
+    height: 50px;
     overflow: hidden;
-    box-shadow: 0 1px 3px #999;
+    box-shadow: 0 1px 7px #bbb;
     letter-spacing: 2px;
     background-color: #f2f2f2;
     border-top: 3px solid #069;
     background-image: linear-gradient(to bottom, #fefefe, #f8f8f8);
 }
 
-.header .logo img {
-    height: 45px;
-    background-color: #069;
-    border-right: 5px solid #069;
+.header .logo {
+    font-family: "logo";
+}
+
+.header .logo .x1 {
+    margin-top:13px;
+    height: 40px;
+    width: 15px;
+    float: left;
+    font-size: 18px;
+    line-height: 13px;
+    color: #333;
+}
+
+.header .logo .x2 {
+    text-indent: 5px;
+    height: 50px;
+    width: 120px;
+    line-height: 50px;
+    float: left;
+    font-size: 38px;
+    color: #555;
+    letter-spacing: -2px;
 }
 
 .header a {
     display: block;
-    height: 45px;
-    line-height: 45px;
+    height: 50px;
+    line-height: 50px;
     margin: 0 12px;
     float: left;
+    color: #555;
     font-family: 'webfont';
 }
 
@@ -779,7 +810,7 @@ div.p .tag {
     line-height: 24px;
     padding: 15px 25px;
     overflow: hidden;
-    color:#555;
+    color: #555;
     font-size: 16px;
     line-height: 30px;
 }
@@ -821,15 +852,17 @@ img.mfp-img {
     overflow: hidden;
     word-break: break-all;
     background-color: #fefefe;
-    color:#555;
+    color: #555;
     font-size: 16px;
     line-height: 30px;
 }
-.gh .ql-editor{
-    color:#555;
+
+.gh .ql-editor {
+    color: #555;
     font-size: 16px;
-    line-height: 30px!important;
+    line-height: 30px !important;
 }
+
 .zone.add.comment .textarea {
     height: 120px;
     line-height: 120px;
@@ -977,19 +1010,21 @@ h3.title {
     text-align: center;
 }
 
-.zone.boardLogo{
+.zone.boardLogo {
     position: relative;
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
     z-index: -1;
 }
-.zone.boardLogo .box{
+
+.zone.boardLogo .box {
     position: absolute;
     top: -15px;
     right: 10px;
     margin: 0;
     height: 60px;
 }
+
 .zone.boardLogo .box:after {
     position: absolute;
     content: '';
@@ -997,8 +1032,9 @@ h3.title {
     height: 100%;
     top: 0;
     left: 0;
-    box-shadow:20px 0px 20px 0px #e0e4e9 inset,-20px 0px 20px 0px #e0e4e9 inset;
+    box-shadow: 20px 0px 20px 0px #e0e4e9 inset, -20px 0px 20px 0px #e0e4e9 inset;
 }
+
 .zone.boardLogo img {
     height: 60px;
 }

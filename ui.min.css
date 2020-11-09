@@ -1,4 +1,10 @@
 @font-face {
+  font-family: logo;
+  font-display: swap;
+  src: url(//at.alicdn.com/t/webfont_okdlwdcrzhi.eot);
+  src: url(//at.alicdn.com/t/webfont_okdlwdcrzhi.eot?#iefix) format('embedded-opentype'),url(//at.alicdn.com/t/webfont_okdlwdcrzhi.woff2) format('woff2'),url(//at.alicdn.com/t/webfont_okdlwdcrzhi.woff) format('woff'),url(//at.alicdn.com/t/webfont_okdlwdcrzhi.ttf) format('truetype'),url(//at.alicdn.com/t/webfont_okdlwdcrzhi.svg#站酷高端黑) format('svg')
+}
+@font-face {
   font-family: webfont;
   font-display: swap;
   src: url(//at.alicdn.com/t/webfont_vhcg99i3guj.eot);
@@ -371,25 +377,43 @@ fieldset {
   border-radius: 8px 10px 2px 2px
 }
 .header {
-  height: 45px;
+  height: 50px;
   overflow: hidden;
-  box-shadow: 0 1px 3px #999;
+  box-shadow: 0 1px 7px #bbb;
   letter-spacing: 2px;
   background-color: #f2f2f2;
   border-top: 3px solid #069;
   background-image: linear-gradient(to bottom,#fefefe,#f8f8f8)
 }
-.header .logo img {
-  height: 45px;
-  background-color: #069;
-  border-right: 5px solid #069
+.header .logo {
+  font-family: logo
+}
+.header .logo .x1 {
+  margin-top: 13px;
+  height: 40px;
+  width: 15px;
+  float: left;
+  font-size: 18px;
+  line-height: 13px;
+  color: #333
+}
+.header .logo .x2 {
+  text-indent: 5px;
+  height: 50px;
+  width: 120px;
+  line-height: 50px;
+  float: left;
+  font-size: 38px;
+  color: #555;
+  letter-spacing: -2px
 }
 .header a {
   display: block;
-  height: 45px;
-  line-height: 45px;
+  height: 50px;
+  line-height: 50px;
   margin: 0 12px;
   float: left;
+  color: #555;
   font-family: webfont
 }
 .header .userbar div {
