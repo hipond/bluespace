@@ -349,8 +349,8 @@ th:not([align]) {
 
 body {
     background-color: #f0f0f0;
-    color: #555;
-    font-size: 14px;
+    color: #777;
+    font-size: 16px;
     font-family: 微软雅黑, "Droid Sans",Helvetica, Tahoma, SimSun, sans-serif;
     font-style: normal;
     font-variant-ligatures: normal;
@@ -359,13 +359,13 @@ body {
     font-variant-east-asian: normal;
     font-weight: normal;
     font-stretch: normal;
-    line-height: 1.5;
+    line-height: 24px;
     word-break: break-all;
     background-repeat: repeat;
 }
 
 body a {
-    color: #333;
+    color: #777;
     text-decoration: none;
     cursor: pointer;
 }
@@ -385,7 +385,7 @@ body a {
 }
 
 input {
-    line-height: 26px;
+    line-height: 30px;
     border: 1px solid #ccc;
     border-radius: 2px;
     width: 200px;
@@ -399,7 +399,6 @@ form label,
     width: 70px;
     line-height: 40px;
     text-align: right;
-    color: #000;
     font-family: 'webfont';
     margin-right: 20px;
 }
@@ -433,17 +432,16 @@ textarea {
 .btn {
     display: inline-block;
     background-color: #eee;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     border-radius: 4px;
     cursor: pointer;
     padding: 0 4px 0 6px !important;
     margin: 5px;
-    color: #555;
+    color: #777;
     border: none;
     font-family: 'webfont';
-    font-size: 14px;
-    line-height: 28px;
-    height: 28px;
+    line-height: 25px;
+    height: 25px;
 }
 
 .btn:active {}
@@ -681,9 +679,9 @@ div.p .tag {
     border-radius: 20px;
 }
 .tab.province .content .item a{
-    padding: 0;
+    padding: 3px;
     margin-right:5px;
-    color: #555;
+    line-height: 30px;
 }
 .tab.province .head {
     padding: 0 0 0 10px;
@@ -694,7 +692,6 @@ div.p .tag {
 }
 
 .zone.region {
-    font-size: 15px;
     font-weight: bold;
 }
 
