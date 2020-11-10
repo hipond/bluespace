@@ -515,7 +515,7 @@ div.p .tag {
   border-radius: 20px
 }
 .tab.province .content .item a {
-  padding: 3px;
+  padding: 2px 0 2px 0;
   margin-right: 5px;
   line-height: 30px
 }
@@ -524,9 +524,6 @@ div.p .tag {
 }
 .tab.province .content {
   padding: 10px
-}
-.zone.region {
-  font-weight: 700
 }
 .topics .item {
   margin: 5px 0
@@ -606,7 +603,7 @@ div.p .tag {
 .zone .userbar .profile {
   line-height: 18px;
   vertical-align: middle;
-  width: 150px;
+  width: 180px;
   overflow: hidden;
   float: left
 }
