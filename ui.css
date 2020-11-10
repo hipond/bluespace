@@ -713,7 +713,7 @@ div.p .tag {
     display: block;
     font-size: 14px;
     text-align: center;
-    color: #069;
+    color: #ab2b2b;
     border: 2px solid #ab2b2b;
     width: 40px;
     height: 25px;
@@ -762,9 +762,11 @@ div.p .tag {
     color: #eee;
     font-size: 24px;
     font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
     background-color: #069;
-    box-shadow: 0 0 3px #aaa;
-    line-height: 30px;
+    box-shadow: 0 0 5px #555 inset;
+    line-height: 35px;
     margin: 0 6px 0 0;
 }
 
