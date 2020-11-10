@@ -327,7 +327,6 @@ textarea {
 .btn {
   display: inline-block;
   background-color: #eee;
-  letter-spacing: 1px;
   border-radius: 5px;
   cursor: pointer;
   padding: 0 4px 0 6px!important;
@@ -367,10 +366,10 @@ fieldset {
   height: 50px;
   overflow: hidden;
   box-shadow: 0 1px 7px #bbb;
-  letter-spacing: 2px;
   background-color: #fefefe;
   border-top: 4px solid #069
 }
+.header .f24,
 .header .logo {
   font-family: logo
 }
