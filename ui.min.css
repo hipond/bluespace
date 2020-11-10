@@ -327,14 +327,15 @@ textarea {
 .btn {
   display: inline-block;
   background-color: #eee;
-  border-radius: 5px;
+  border-radius: 3px;
   cursor: pointer;
   padding: 0 4px 0 6px!important;
   margin: 5px;
   color: #666;
   border: none;
   line-height: 24px;
-  height: 24px
+  height: 24px;
+  box-shadow: 0 0 2px 0 rgba(0,0,0,.18),0 0 2px 0 rgba(0,0,0,.15)
 }
 .btn.focus {
   background-color: #069!important;
@@ -510,14 +511,15 @@ div.p .tag {
   margin-right: 5px
 }
 .tab.region * .focus {
-  background: #069;
+  background: #069!important;
   color: #eee!important;
   border-radius: 20px
 }
 .tab.province .content .item a {
   padding: 2px 0 2px 0;
   margin-right: 5px;
-  line-height: 30px
+  line-height: 30px;
+  background-color: #f7f7f7
 }
 .tab.province .head {
   padding: 0 0 0 10px
