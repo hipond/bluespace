@@ -263,7 +263,7 @@ th:not([align]) {
 }
 body {
   background-color: #f0f0f0;
-  color: #777;
+  color: #666;
   font-size: 16px;
   font-family: 微软雅黑,"Droid Sans",Helvetica,Tahoma,SimSun,sans-serif;
   font-style: normal;
@@ -278,7 +278,7 @@ body {
   background-repeat: repeat
 }
 body a {
-  color: #777;
+  color: #666;
   text-decoration: none;
   cursor: pointer
 }
@@ -340,7 +340,7 @@ textarea {
   cursor: pointer;
   padding: 0 4px 0 6px!important;
   margin: 5px;
-  color: #777;
+  color: #666;
   border: none;
   font-family: webfont;
   line-height: 25px;
@@ -449,14 +449,15 @@ fieldset {
 }
 .zone.breadcrumb a {
   margin: 0 6px;
-  color: #777
+  color: #666
 }
 .footer {
   text-align: center
 }
 .footer * {
-  font-size: 10px;
-  color: #bbb
+  font-size: 12px;
+  color: #bbb;
+  line-height: 16px
 }
 .tag {
   font-family: webfont;
@@ -807,6 +808,9 @@ h3.title {
   font-size: 20px;
   font-weight: 700;
   text-align: center
+}
+.zone.areas * {
+  font-family: inherit
 }
 .zone.boardLogo {
   position: relative;
