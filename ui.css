@@ -1,27 +1,16 @@
 @font-face {
-  font-family: 'logo';
-  font-display: swap;
-  src: url('//at.alicdn.com/t/webfont_okdlwdcrzhi.eot'); /* IE9*/
-  src: url('//at.alicdn.com/t/webfont_okdlwdcrzhi.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('//at.alicdn.com/t/webfont_okdlwdcrzhi.woff2') format('woff2'),
-  url('//at.alicdn.com/t/webfont_okdlwdcrzhi.woff') format('woff'), /* chrome、firefox */
-  url('//at.alicdn.com/t/webfont_okdlwdcrzhi.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-  url('//at.alicdn.com/t/webfont_okdlwdcrzhi.svg#站酷高端黑') format('svg'); /* iOS 4.1- */
-}
-
-@font-face {
-    font-family: 'webfont';
+    font-family: 'logo';
     font-display: swap;
-    src: url('//at.alicdn.com/t/webfont_vhcg99i3guj.eot');
+    src: url('//at.alicdn.com/t/webfont_okdlwdcrzhi.eot');
     /* IE9*/
-    src: url('//at.alicdn.com/t/webfont_vhcg99i3guj.eot?#iefix') format('embedded-opentype'),
+    src: url('//at.alicdn.com/t/webfont_okdlwdcrzhi.eot?#iefix') format('embedded-opentype'),
         /* IE6-IE8 */
-        url('//at.alicdn.com/t/webfont_vhcg99i3guj.woff2') format('woff2'),
-        url('//at.alicdn.com/t/webfont_vhcg99i3guj.woff') format('woff'),
+        url('//at.alicdn.com/t/webfont_okdlwdcrzhi.woff2') format('woff2'),
+        url('//at.alicdn.com/t/webfont_okdlwdcrzhi.woff') format('woff'),
         /* chrome、firefox */
-        url('//at.alicdn.com/t/webfont_vhcg99i3guj.ttf') format('truetype'),
+        url('//at.alicdn.com/t/webfont_okdlwdcrzhi.ttf') format('truetype'),
         /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-        url('//at.alicdn.com/t/webfont_vhcg99i3guj.svg#思源黑体-正粗') format('svg');
+        url('//at.alicdn.com/t/webfont_okdlwdcrzhi.svg#站酷高端黑') format('svg');
     /* iOS 4.1- */
 }
 
@@ -351,7 +340,7 @@ body {
     background-color: #f0f0f0;
     color: #666;
     font-size: 16px;
-    font-family: 微软雅黑, "Droid Sans",Helvetica, Tahoma, SimSun, sans-serif;
+    font-family: 微软雅黑, "Droid Sans", Helvetica, Tahoma, SimSun, sans-serif;
     font-style: normal;
     font-variant-ligatures: normal;
     font-variant-caps: normal;
@@ -399,12 +388,10 @@ form label,
     width: 70px;
     line-height: 40px;
     text-align: right;
-    font-family: 'webfont';
     margin-right: 20px;
 }
 
 legend {
-    font-family: 'webfont';
     font-size: 16px;
 }
 
@@ -439,7 +426,6 @@ textarea {
     margin: 5px;
     color: #666;
     border: none;
-    font-family: 'webfont';
     line-height: 24px;
     height: 24px;
 }
@@ -472,9 +458,7 @@ fieldset {
 }
 
 
-.wf {
-    font-family: 'webfont' !important;
-}
+.wf {}
 
 .tr {
     text-align: right;
@@ -500,7 +484,7 @@ fieldset {
 }
 
 .header .logo .x1 {
-    margin-top:10px;
+    margin-top: 10px;
     height: 30px;
     width: 15px;
     float: left;
@@ -529,7 +513,6 @@ fieldset {
     margin: 0 12px;
     float: left;
     color: #555;
-    font-family: 'webfont';
 }
 
 .header .userbar div {
@@ -560,7 +543,6 @@ fieldset {
 
 .zone.breadcrumb {
     color: #222;
-    font-family: 'webfont';
 }
 
 .zone.breadcrumb a.first {
@@ -665,31 +647,34 @@ div.p .tag {
 .tab.region * {
     font-family: "webfont";
 }
+
 .tab.region .head {
     padding: 10px;
 }
 
 .tab.region li.key {
     padding: 0;
-    margin-right:5px;
+    margin-right: 5px;
 }
 
 .tab.region * .focus {
     background: #069;
-    color: #eee!important;
+    color: #eee !important;
     border-radius: 20px;
 }
-.tab.province .content .item a{
+
+.tab.province .content .item a {
     padding: 3px;
-    margin-right:5px;
+    margin-right: 5px;
     line-height: 30px;
 }
+
 .tab.province .head {
     padding: 0 0 0 10px;
 }
 
 .tab.province .content {
-    padding:10px;
+    padding: 10px;
 }
 
 .zone.region {
@@ -730,7 +715,6 @@ div.p .tag {
     margin-top: 0;
     margin-right: 12px;
     display: block;
-    font-family: 'webfont' !important;
     font-size: 14px;
     text-align: center;
     color: #C24545;
@@ -738,7 +722,6 @@ div.p .tag {
     width: 40px;
     height: 25px;
     line-height: 23px;
-
 }
 
 
@@ -1011,9 +994,11 @@ h3.title {
     font-weight: bold;
     text-align: center;
 }
+
 .zone.areas * {
     font-family: inherit;
 }
+
 .zone.boardLogo {
     position: relative;
     margin: 0;

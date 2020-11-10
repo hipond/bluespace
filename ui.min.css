@@ -5,12 +5,6 @@
   src: url(//at.alicdn.com/t/webfont_okdlwdcrzhi.eot?#iefix) format('embedded-opentype'),url(//at.alicdn.com/t/webfont_okdlwdcrzhi.woff2) format('woff2'),url(//at.alicdn.com/t/webfont_okdlwdcrzhi.woff) format('woff'),url(//at.alicdn.com/t/webfont_okdlwdcrzhi.ttf) format('truetype'),url(//at.alicdn.com/t/webfont_okdlwdcrzhi.svg#站酷高端黑) format('svg')
 }
 @font-face {
-  font-family: webfont;
-  font-display: swap;
-  src: url(//at.alicdn.com/t/webfont_vhcg99i3guj.eot);
-  src: url(//at.alicdn.com/t/webfont_vhcg99i3guj.eot?#iefix) format('embedded-opentype'),url(//at.alicdn.com/t/webfont_vhcg99i3guj.woff2) format('woff2'),url(//at.alicdn.com/t/webfont_vhcg99i3guj.woff) format('woff'),url(//at.alicdn.com/t/webfont_vhcg99i3guj.ttf) format('truetype'),url(//at.alicdn.com/t/webfont_vhcg99i3guj.svg#思源黑体-正粗) format('svg')
-}
-@font-face {
   font-family: iconfont;
   src: url(//at.alicdn.com/t/font_2142143_adhbrbswsbt.eot);
   src: url(//at.alicdn.com/t/font_2142143_adhbrbswsbt.eot?#iefix) format('embedded-opentype'),url(//at.alicdn.com/t/font_2142143_adhbrbswsbt.woff2) format('woff2'),url(//at.alicdn.com/t/font_2142143_adhbrbswsbt.woff) format('woff'),url(//at.alicdn.com/t/font_2142143_adhbrbswsbt.ttf) format('truetype'),url(//at.alicdn.com/t/font_2142143_adhbrbswsbt.svg#iconfont) format('svg')
@@ -307,11 +301,9 @@ form label {
   width: 70px;
   line-height: 40px;
   text-align: right;
-  font-family: webfont;
   margin-right: 20px
 }
 legend {
-  font-family: webfont;
   font-size: 16px
 }
 textarea {
@@ -342,7 +334,6 @@ textarea {
   margin: 5px;
   color: #666;
   border: none;
-  font-family: webfont;
   line-height: 24px;
   height: 24px
 }
@@ -365,9 +356,6 @@ textarea {
 fieldset {
   padding: 10px;
   border: 1px solid #eee
-}
-.wf {
-  font-family: webfont!important
 }
 .tr {
   text-align: right
@@ -413,8 +401,7 @@ fieldset {
   line-height: 50px;
   margin: 0 12px;
   float: left;
-  color: #555;
-  font-family: webfont
+  color: #555
 }
 .header .userbar div {
   float: left;
@@ -438,8 +425,7 @@ fieldset {
   margin: 15px 10px
 }
 .zone.breadcrumb {
-  color: #222;
-  font-family: webfont
+  color: #222
 }
 .zone.breadcrumb a.first {
   margin: 0
@@ -576,7 +562,6 @@ div.p .tag {
   margin-top: 0;
   margin-right: 12px;
   display: block;
-  font-family: webfont!important;
   font-size: 14px;
   text-align: center;
   color: #c24545;
