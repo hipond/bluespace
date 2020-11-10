@@ -411,11 +411,13 @@ fieldset {
 }
 .header .userbar .username {
   padding: 0 5px;
-  font-size: 12px
+  font-size: 12px;
+  border-radius: 3px 0 0 3px
 }
 .header .userbar .score {
   padding: 0 5px;
-  font-size: 9px
+  font-size: 9px;
+  border-radius: 0 3px 3px 0
 }
 .body.main {
   max-width: 1000px;
@@ -425,7 +427,7 @@ fieldset {
   margin: 15px 10px
 }
 .zone.breadcrumb {
-  color: #222
+  color: #ccc
 }
 .zone.breadcrumb a.first {
   margin: 0

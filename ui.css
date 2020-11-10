@@ -427,7 +427,7 @@ textarea {
     border: none;
     line-height: 24px;
     height: 24px;
-    box-shadow: 0 0px 2px 0 rgba(0,0,0,.18), 0 0px 2px 0 rgba(0,0,0,.15);
+    box-shadow: 0 0px 2px 0 rgba(0, 0, 0, .18), 0 0px 2px 0 rgba(0, 0, 0, .15);
 }
 
 .btn:active {}
@@ -466,8 +466,9 @@ fieldset {
 
 /*应用*/
 .tree a.switch i.icon {
-    font-size: 20px!important;
+    font-size: 20px !important;
 }
+
 .header {
     height: 50px;
     overflow: hidden;
@@ -476,7 +477,8 @@ fieldset {
     border-top: 4px solid #069;
 }
 
-.header .logo , .header .f24{
+.header .logo,
+.header .f24 {
     font-family: "logo";
 }
 
@@ -522,11 +524,13 @@ fieldset {
 .header .userbar .username {
     padding: 0 5px;
     font-size: 12px;
+    border-radius: 3px 0 0 3px;
 }
 
 .header .userbar .score {
     padding: 0 5px;
     font-size: 9px;
+    border-radius: 0 3px 3px 0;
 }
 
 .body.main {
@@ -539,7 +543,7 @@ fieldset {
 }
 
 .zone.breadcrumb {
-    color: #222;
+    color: #ccc;
 }
 
 .zone.breadcrumb a.first {
@@ -639,8 +643,7 @@ div.p .tag {
     border-radius: 4px;
 }
 
-.tab.region * {
-}
+.tab.region * {}
 
 .tab.region .head {
     padding: 10px;
@@ -652,7 +655,7 @@ div.p .tag {
 }
 
 .tab.region * .focus {
-    background: #069!important;
+    background: #069 !important;
     color: #eee !important;
     border-radius: 20px;
 }
@@ -672,8 +675,7 @@ div.p .tag {
     padding: 10px;
 }
 
-.zone.region {
-}
+.zone.region {}
 
 .topics .item {
     margin: 5px 0;
