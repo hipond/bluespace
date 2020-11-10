@@ -567,7 +567,6 @@ fieldset {
 }
 
 .tag {
-    font-family: "webfont";
     padding: 2px 5px;
     background-color: #eee;
     cursor: pointer;
@@ -576,7 +575,6 @@ fieldset {
 
 .radio {
     background-color: #e0e0e0;
-    font-family: "webfont";
     padding: 2px 5px;
     cursor: pointer;
     border-radius: 3px;
@@ -643,7 +641,6 @@ div.p .tag {
 }
 
 .tab.region * {
-    font-family: "webfont";
 }
 
 .tab.region .head {
@@ -849,7 +846,6 @@ img.mfp-img {
 .zone.add.comment .textarea {
     height: 120px;
     line-height: 120px;
-    font-family: "webfont";
     font-size: 20px;
     text-align: center;
     background-color: #fff;
