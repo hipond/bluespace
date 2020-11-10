@@ -164,23 +164,23 @@ th:not([align]) {
 
 .b1 {
     background-color: #069 !important;
-    color: #f0f0f0 !important;
+    color: #eee !important;
 }
 
 .b2 {
-    background-color: #069 !important;
-    color: #f0f0f0 !important;
+    background-color: #f0f0f0 !important;
+    color: #555 !important;
 }
 
 /*#ab2b2b*/
 .b3 {
-    background-color: #069 !important;
-    color: #f0f0f0 !important;
+    background-color: #f0f0f0 !important;
+    color: #555 !important;
 }
 
 .b5 {
-    background-color: #555 !important;
-    color: #f0f0f0 !important;
+    background-color: #f0f0f0 !important;
+    color: #555 !important;
 }
 
 .c0 {
@@ -325,7 +325,7 @@ th:not([align]) {
 .ease {
     box-shadow: 0 0 3px #aaa;
     padding: 12px;
-    background-color: #f7f7f7;
+    background-color: #fdfdfd;
     border-radius: 4px;
 }
 
@@ -348,8 +348,8 @@ th:not([align]) {
 }
 
 body {
-    background-color: #e0e4e9;
-    color: #222;
+    background-color: #f0f0f0;
+    color: #555;
     font-size: 14px;
     font-family: 微软雅黑, Helvetica, Tahoma, SimSun, sans-serif;
     font-style: normal;
@@ -432,24 +432,24 @@ textarea {
 
 .btn {
     display: inline-block;
-    background-color: #069;
-    box-shadow: 0 0 3px #888 inset;
-
+    background-color: #eee;
     letter-spacing: 2px;
     border-radius: 4px;
     cursor: pointer;
-    padding: 3px 4px 4px 6px !important;
+    padding: 0 4px 0 6px !important;
     margin: 5px;
-    color: #f0f0f0;
+    color: #555;
     border: none;
     font-family: 'webfont';
-    font-size: 13px;
+    font-size: 14px;
+    line-height: 28px;
+    height: 28px;
 }
 
 .btn:active {}
 
 .btn.focus {
-    background-color: #ab2b2b !important;
+    background-color: #069 !important;
     color: #f0f0f0 !important;
 }
 
@@ -464,7 +464,7 @@ textarea {
 }
 
 .btn .icon {
-    font-size: 14px;
+    font-size: 16px;
     width: 20px;
 }
 
@@ -493,9 +493,8 @@ fieldset {
     overflow: hidden;
     box-shadow: 0 1px 7px #bbb;
     letter-spacing: 2px;
-    background-color: #f2f2f2;
-    border-top: 3px solid #069;
-    background-image: linear-gradient(to bottom, #fefefe, #f8f8f8);
+    background-color: #fefefe;
+    border-top: 4px solid #069;
 }
 
 .header .logo {
@@ -503,13 +502,15 @@ fieldset {
 }
 
 .header .logo .x1 {
-    margin-top:13px;
-    height: 40px;
+    margin-top:10px;
+    height: 30px;
     width: 15px;
     float: left;
     font-size: 18px;
     line-height: 13px;
-    color: #333;
+    color: #fff;
+    background-color: #ab2b2b;
+    border-radius: 30px;
 }
 
 .header .logo .x2 {
@@ -589,7 +590,7 @@ fieldset {
 .tag {
     font-family: "webfont";
     padding: 2px 5px;
-    background-color: #e0e0e0;
+    background-color: #eee;
     cursor: pointer;
     border-radius: 3px;
 }
@@ -662,36 +663,39 @@ div.p .tag {
 }
 
 .zone.menu .ease {
-    box-shadow: 0 0 5px #777 inset;
-    border-radius: 8px;
+    box-shadow: 0 0 3px #aaa;
+    border-radius: 4px;
 }
 
 .tab.region .head {
-    background-color: #eee;
     padding: 10px;
 }
 
-.tab.region .thin.head li.key.btn {
-    background-color: #eee;
-    padding-left: 4px !important;
-    padding-right: 4px !important;
-    margin-left: 3px;
-    margin-right: 3px;
+.tab.region li.key {
+    padding: 0;
+    margin-right:5px;
 }
 
+.tab.region .focus {
+    background: #069;
+    color: #eee;
+    border-radius: 20px;
+}
+.tab.province .content .item a{
+    padding: 0;
+    margin-right:5px;
+}
 .tab.province .head {
-    background-color: #e9e7e7;
-    padding: 15px;
+    padding: 0 0 0 10px;
 }
 
 .tab.province .content {
-    background-color: #eee;
-    padding: 20px 15px;
-    min-height: 200px;
+    padding:10px;
 }
 
-.region .zone {
-    background-color: #f5f5f5;
+.zone.region {
+    font-size: 15px;
+    font-weight: bold;
 }
 
 .topics .item {
@@ -1032,7 +1036,7 @@ h3.title {
     height: 100%;
     top: 0;
     left: 0;
-    box-shadow: 20px 0px 20px 0px #e0e4e9 inset, -20px 0px 20px 0px #e0e4e9 inset;
+    box-shadow: 20px 0px 20px 0px #f0f0f0 inset, -20px 0px 20px 0px #f0f0f0 inset;
 }
 
 .zone.boardLogo img {
