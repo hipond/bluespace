@@ -48,7 +48,7 @@ i {
     font-variant-east-asian: normal;
     font-weight: normal;
     font-stretch: normal;
-    font-size: 16px;
+    font-size: 18px;
     text-align: center;
     cursor: pointer;
 }
@@ -465,11 +465,9 @@ fieldset {
 }
 
 /*应用*/
-
-.tree.ease {
-    border-radius: 8px 10px 2px 2px;
+.tree a.switch i.icon {
+    font-size: 20px!important;
 }
-
 .header {
     height: 50px;
     overflow: hidden;
