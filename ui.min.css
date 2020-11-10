@@ -118,7 +118,7 @@ th:not([align]) {
   background-color: #f1f1f1!important
 }
 .b1 {
-  background-color: #069!important;
+  background-color: #005293!important;
   color: #eee!important
 }
 .b2 {
@@ -149,7 +149,7 @@ th:not([align]) {
   color: #9d5b8b
 }
 .c3 {
-  color: #ab2b2b
+  color: #005293
 }
 .f9 {
   font-size: 9px
@@ -337,7 +337,7 @@ textarea {
   height: 24px
 }
 .btn.focus {
-  background-color: #069!important;
+  background-color: #005293!important;
   color: #f0f0f0!important
 }
 .btn.off {
@@ -367,7 +367,7 @@ fieldset {
   overflow: hidden;
   box-shadow: 0 1px 7px #bbb;
   background-color: #fefefe;
-  border-top: 4px solid #069
+  border-top: 4px solid #005293
 }
 .header .f24,
 .header .logo {
@@ -375,13 +375,13 @@ fieldset {
 }
 .header .logo .x1 {
   margin-top: 10px;
-  height: 30px;
+  height: 28px;
   width: 15px;
   float: left;
-  font-size: 18px;
-  line-height: 13px;
+  font-size: 16px;
+  line-height: 14px;
   color: #fff;
-  background-color: #ab2b2b;
+  background-color: #c4020d;
   border-radius: 30px
 }
 .header .logo .x2 {
@@ -391,7 +391,7 @@ fieldset {
   line-height: 50px;
   float: left;
   font-size: 38px;
-  color: #555;
+  color: #666;
   letter-spacing: -2px
 }
 .header a {
@@ -510,7 +510,7 @@ div.p .tag {
   margin-right: 5px
 }
 .tab.region * .focus {
-  background: #069;
+  background: #005293;
   color: #eee!important;
   border-radius: 20px
 }
@@ -555,8 +555,8 @@ div.p .tag {
   display: block;
   font-size: 14px;
   text-align: center;
-  color: #c24545;
-  border: 2px solid #c24545;
+  color: #005293;
+  border: 2px solid #ce3b3b;
   width: 40px;
   height: 25px;
   line-height: 23px
@@ -595,7 +595,7 @@ div.p .tag {
   color: #eee;
   font-size: 24px;
   font-weight: 700;
-  background-color: #069;
+  background-color: #005293;
   box-shadow: 0 0 3px #aaa;
   line-height: 30px;
   margin: 0 6px 0 0
@@ -759,7 +759,7 @@ img.mfp-img {
   margin: 10px 0 20px 0
 }
 .zone.optional.description .ease {
-  border-left: 7px solid #069
+  border-left: 7px solid #005293
 }
 table th {
   background-color: #eee;

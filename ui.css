@@ -152,7 +152,7 @@ th:not([align]) {
 }
 
 .b1 {
-    background-color: #069 !important;
+    background-color: #005293 !important;
     color: #eee !important;
 }
 
@@ -161,7 +161,7 @@ th:not([align]) {
     color: #555 !important;
 }
 
-/*#ab2b2b*/
+/*#005293*/
 .b3 {
     background-color: #f0f0f0 !important;
     color: #555 !important;
@@ -193,7 +193,7 @@ th:not([align]) {
 }
 
 .c3 {
-    color: #ab2b2b;
+    color: #005293;
 }
 
 .f9 {
@@ -432,7 +432,7 @@ textarea {
 .btn:active {}
 
 .btn.focus {
-    background-color: #069 !important;
+    background-color: #005293 !important;
     color: #f0f0f0 !important;
 }
 
@@ -474,7 +474,7 @@ fieldset {
     overflow: hidden;
     box-shadow: 0 1px 7px #bbb;
     background-color: #fefefe;
-    border-top: 4px solid #069;
+    border-top: 4px solid #005293;
 }
 
 .header .logo , .header .f24{
@@ -483,13 +483,13 @@ fieldset {
 
 .header .logo .x1 {
     margin-top: 10px;
-    height: 30px;
+    height: 28px;
     width: 15px;
     float: left;
-    font-size: 18px;
-    line-height: 13px;
+    font-size: 16px;
+    line-height: 14px;
     color: #fff;
-    background-color: #ab2b2b;
+    background-color: #C4020D;
     border-radius: 30px;
 }
 
@@ -500,7 +500,7 @@ fieldset {
     line-height: 50px;
     float: left;
     font-size: 38px;
-    color: #555;
+    color: #666;
     letter-spacing: -2px;
 }
 
@@ -653,7 +653,7 @@ div.p .tag {
 }
 
 .tab.region * .focus {
-    background: #069;
+    background: #005293;
     color: #eee !important;
     border-radius: 20px;
 }
@@ -711,8 +711,8 @@ div.p .tag {
     display: block;
     font-size: 14px;
     text-align: center;
-    color: #C24545;
-    border: 2px solid #C24545;
+    color: #005293;
+    border: 2px solid #ce3b3b;
     width: 40px;
     height: 25px;
     line-height: 23px;
@@ -760,7 +760,7 @@ div.p .tag {
     color: #eee;
     font-size: 24px;
     font-weight: bold;
-    background-color: #069;
+    background-color: #005293;
     box-shadow: 0 0 3px #aaa;
     line-height: 30px;
     margin: 0 6px 0 0;
@@ -957,7 +957,7 @@ img.mfp-img {
 }
 
 .zone.optional.description .ease {
-    border-left: 7px solid #069;
+    border-left: 7px solid #005293;
 }
 
 table th {
