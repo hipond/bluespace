@@ -152,7 +152,7 @@ th:not([align]) {
 }
 
 .b1 {
-    background-color: #005293 !important;
+    background-color: #069 !important;
     color: #eee !important;
 }
 
@@ -161,7 +161,7 @@ th:not([align]) {
     color: #555 !important;
 }
 
-/*#005293*/
+/*#069*/
 .b3 {
     background-color: #f0f0f0 !important;
     color: #555 !important;
@@ -193,7 +193,7 @@ th:not([align]) {
 }
 
 .c3 {
-    color: #005293;
+    color: #069;
 }
 
 .f9 {
@@ -432,7 +432,7 @@ textarea {
 .btn:active {}
 
 .btn.focus {
-    background-color: #005293 !important;
+    background-color: #069 !important;
     color: #f0f0f0 !important;
 }
 
@@ -474,7 +474,7 @@ fieldset {
     overflow: hidden;
     box-shadow: 0 1px 7px #bbb;
     background-color: #fefefe;
-    border-top: 4px solid #005293;
+    border-top: 4px solid #069;
 }
 
 .header .logo , .header .f24{
@@ -489,7 +489,7 @@ fieldset {
     font-size: 16px;
     line-height: 14px;
     color: #fff;
-    background-color: #C4020D;
+    background-color: #ab2b2b;
     border-radius: 30px;
 }
 
@@ -653,7 +653,7 @@ div.p .tag {
 }
 
 .tab.region * .focus {
-    background: #005293;
+    background: #069;
     color: #eee !important;
     border-radius: 20px;
 }
@@ -711,8 +711,8 @@ div.p .tag {
     display: block;
     font-size: 14px;
     text-align: center;
-    color: #005293;
-    border: 2px solid #ce3b3b;
+    color: #069;
+    border: 2px solid #ab2b2b;
     width: 40px;
     height: 25px;
     line-height: 23px;
@@ -760,7 +760,7 @@ div.p .tag {
     color: #eee;
     font-size: 24px;
     font-weight: bold;
-    background-color: #005293;
+    background-color: #069;
     box-shadow: 0 0 3px #aaa;
     line-height: 30px;
     margin: 0 6px 0 0;
@@ -957,7 +957,7 @@ img.mfp-img {
 }
 
 .zone.optional.description .ease {
-    border-left: 7px solid #005293;
+    border-left: 7px solid #069;
 }
 
 table th {
