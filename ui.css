@@ -857,10 +857,9 @@ img.mfp-img {
 }
 
 .modaal-content-container {
-    padding: 15px;
+    padding: 10px;
     background-color: #fff;
     box-shadow: 0 0 8px #000;
-    border-radius: 8px;
 }
 
 .textarea.editor.delay {

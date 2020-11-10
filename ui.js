@@ -624,3 +624,98 @@ gh.run('com.debug', function() {
         }
     };
 });
+
+gh.run('AMap', function() {
+    if ($('.switch.amap').length<1) {
+        return;
+    }
+
+    $('body.gh').append('<div id="popupAMap" class="modal inline hide super"><div id="AMap"></div></div>')
+    $('#AMap').css({
+        "height": Math.max(Math.min($(window).height() - 100, 500), 200)
+    });
+
+    var cityName = gh.cityName;
+    var cityCenter = null;
+    var runAMapWidget = function() {
+        map = new AMap.Map('AMap', {
+            viewMode: '3D',
+            zoom: 12
+        });
+        map.setCity(cityName);
+        map.plugin(["AMap.ToolBar", "AMap.Scale", "AMap.DistrictSearch", 'AMap.Weather'], function() {
+            map.addControl(new AMap.Scale());
+            map.addControl(new AMap.ToolBar());
+
+            var district = new AMap.DistrictSearch({
+                extensions: 'all',
+                level: 'district'
+            });
+            district.search(cityName, function(status, result) {
+                var bounds = result.districtList[0].boundaries;
+                cityCenter = result.districtList[0].center;
+                console.log(result.districtList[0]);
+                console.log(cityCenter.pos);
+                var polygons = [];
+                if (bounds) {
+                    for (var i = 0, l = bounds.length; i < l; i++) {
+                        var polygon = new AMap.Polygon({
+                            map: map,
+                            strokeWeight: 1,
+                            path: bounds[i],
+                            fillOpacity: 0.1,
+                            fillColor: '#015f5a',
+                            strokeColor: '#BF0A2B'
+                        });
+                        polygons.push(polygon);
+                    }
+                    map.setFitView();
+                }
+
+                var weather = new AMap.Weather();
+                weather.getLive(cityName, function(err, data) {
+                    if (!err) {
+                        var str = [];
+                        str.push('<h4 >实时天气' + '</h4><hr>');
+                        str.push('<div>城市/区：' + data.city + '</div>');
+                        str.push('<div>天气：' + data.weather + '</div>');
+                        str.push('<div>温度：' + data.temperature + '℃</div>');
+                        str.push('<div>风向：' + data.windDirection + '</div>');
+                        str.push('<div>风力：' + data.windPower + ' 级</div>');
+                        str.push('<div>空气湿度：' + data.humidity + '</div>');
+                        str.push('<div>发布时间：' + data.reportTime + '</div>');
+                        var marker = new AMap.Marker({ map: map, position: [cityCenter.lng, cityCenter.lat] });
+                        var infoWin = new AMap.InfoWindow({
+                            content: '<div class="info amap">' + str.join('') + '</div>',
+                            isCustom: true,
+                            offset: new AMap.Pixel(0, -37)
+                        });
+                        infoWin.open(map, marker.getPosition());
+                        marker.on('mouseover', function() {
+                            infoWin.open(map, marker.getPosition());
+                        });
+                    }
+                });
+
+            });
+
+
+        });
+    };
+
+    var state = 0;
+    $('.switch.amap').on('click', function(e) {
+
+        if (state > 0) {
+            return false;
+        }
+        state = 1;
+        $.getScript("//webapi.amap.com/maps?v=2.0&key=7a691853c163226237988b482ce8ee6b")
+            .done(function() {
+                runAMapWidget();
+            })
+            .fail(function() {
+                state = 0;
+            });
+    });
+});
