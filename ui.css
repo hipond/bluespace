@@ -554,11 +554,11 @@ fieldset {
 }
 
 .zone.breadcrumb a.first i {
-    margin-right: 5px;
+    margin-right: 2px;
 }
 
 .zone.breadcrumb a {
-    margin: 0 3px 0 5px;
+    margin: 0 0 0 2px;
     padding: 0px;
     color: #666;
 }
@@ -774,12 +774,22 @@ div.p .tag {
     margin: 0 6px 0 0;
 }
 
-.zone .userbar .profile {
-    line-height: 18px;
-    vertical-align: middle;
+.zone .userbar .profile { 
     width: 180px;
     overflow: hidden;
     float: left;
+}
+
+.zone .userbar .profile .username {
+    line-height: 28px;
+    display: block;
+    height: 25px;
+}
+.zone .userbar .profile .created_at{
+    line-height: 15px;
+    font-size: 12px;
+    display: block;
+    height: 15px;
 }
 
 .zone .userbar .meta {
@@ -791,6 +801,7 @@ div.p .tag {
     line-height: 40px;
     padding: 0 6px;
 }
+
 
 .topic .content {
     margin: 0;
