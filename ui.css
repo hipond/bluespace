@@ -381,6 +381,7 @@ input {
     margin: 5px;
     text-indent: 8px;
     font-size: 16px !important;
+    color: #555;
 }
 
 form label,
@@ -467,6 +468,7 @@ fieldset {
 
 /*应用*/
 .tree a.switch i.icon {
+    vertical-align: middle;
     font-size: 20px !important;
 }
 
@@ -556,7 +558,8 @@ fieldset {
 }
 
 .zone.breadcrumb a {
-    margin: 0 6px;
+    margin: 0 3px 0 5px;
+    padding: 0px;
     color: #666;
 }
 
@@ -709,7 +712,7 @@ div.p .tag {
     position: absolute;
     z-index: 10;
     right: 0;
-    margin-top: 0;
+    margin-top: -30px;
     margin-right: 12px;
     display: block;
     font-size: 14px;
@@ -798,7 +801,9 @@ div.p .tag {
     font-size: 16px;
     line-height: 30px;
 }
-
+.mob .topic .content {
+    padding: 15px 10px;
+}
 .content ul,
 .content ol {
     padding-left: 30px;

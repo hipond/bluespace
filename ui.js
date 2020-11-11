@@ -585,6 +585,12 @@ gh.run('com.form', function() {
             var toWidth = $parent.width() - offset - 50;
             $input.width(toWidth);
         });
+
+        if ($(window).width() < 501) {
+            $('body').addClass('mob');
+        }else{
+            $('body').removeClass('mob');
+        }
     };
     auto();
     $(window).resize(function() {
@@ -626,7 +632,7 @@ gh.run('com.debug', function() {
 });
 
 gh.run('AMap', function() {
-    if ($('.switch.amap').length<1) {
+    if ($('.switch.amap').length < 1) {
         return;
     }
 
