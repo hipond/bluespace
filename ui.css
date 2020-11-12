@@ -432,7 +432,7 @@ textarea {
     box-shadow: 0 0px 2px 0 rgba(0, 0, 0, .18), 0 0px 2px 0 rgba(0, 0, 0, .15);
 }
 
-.btn:active {}
+
 
 .btn.focus {
     background-color: #069 !important;
@@ -460,7 +460,7 @@ fieldset {
 }
 
 
-.wf {}
+
 
 .tr {
     text-align: right;
@@ -618,7 +618,7 @@ div.p .tag {
     border-radius: 3px;
 }
 
-.tab {}
+
 
 .tab ul.head li {
     display: inline-block;
@@ -647,7 +647,7 @@ div.p .tag {
     border-radius: 4px;
 }
 
-.tab.region * {}
+
 
 .tab.region .head {
     padding: 10px;
@@ -679,7 +679,7 @@ div.p .tag {
     padding: 10px;
 }
 
-.zone.region {}
+
 
 .topics .item {
     margin: 5px 0;
