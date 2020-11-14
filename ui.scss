@@ -965,3 +965,16 @@ h3 {
     text-align: center;
   }
 }
+
+.content {
+  .ql-code-block-container{
+    box-shadow: 0 0 5px #555 inset;
+    background-color: #23241f;
+    color: #f8f8f2;
+    overflow: visible;
+    font-family: monospace;
+    cursor: text;
+    padding:15px;
+    border-radius:2px;
+  }
+}
