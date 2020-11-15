@@ -353,7 +353,7 @@ gh.fn('editor', function(options) {
         }
         var i = 0;
         var emotionMap = [];
-        while (i++ < 52) {
+        while (i++ < 16) {
             emotionMap[i] = { alt: '[' + i + ']', src: gh.cdn('/lib/ldw/' + i + '.gif') }
         }
         gh.editor.config.emotions = [{
