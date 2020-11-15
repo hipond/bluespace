@@ -32,7 +32,7 @@ figure,
 menu {
   display: block;
 }
-i {
+i.icon {
   display: inline-block;
   font-family: 'iconfont' !important;
   font-style: normal;
@@ -809,11 +809,6 @@ div {
       }
     }
   }
-  .ql-editor {
-    color: #555;
-    font-size: 16px;
-    line-height: 30px !important;
-  }
   h1 {
     font-size: 18px !important;
     font-weight: bold;
@@ -822,9 +817,11 @@ div {
     font-size: 16px !important;
     font-weight: bold;
   }
-  p {
-    margin: 10px 0;
-    text-indent: 30px;
+  .content {
+    p {
+      margin: 10px 0;
+      text-indent: 30px;
+    }
   }
 }
 .stamp {
@@ -891,18 +888,7 @@ img {
     }
   }
 }
-.ql-editor {
-  height: 360px !important;
-}
-.ql-align-left {
-  text-align: left;
-}
-.ql-align-center {
-  text-align: center;
-}
-.ql-align-right {
-  text-align: right;
-}
+
 .amap {
   &.weather {
     width: 5rem;
@@ -936,21 +922,7 @@ img {
   left: 0;
   z-index: -1;
 }
-.ql-snow {
-  .ql-editor {
-    h1 {
-      font-size: 18px !important;
-      font-weight: bold;
-    }
-    h2 {
-      font-size: 16px !important;
-      font-weight: bold;
-    }
-    p {
-      margin-bottom: 10px;
-    }
-  }
-}
+
 .modaal-wrapper {
   &.modaal-inline {
     .amap-copyright {

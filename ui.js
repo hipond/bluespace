@@ -220,10 +220,9 @@ gh.data = function(element) {
         }
         var $area = $(this);
         var key = $area.attr('name');
-        if ($area.hasClass('editor')) {
-            var editorId = $area.attr('editor') || null;
-            var text = tinymce.editors[editorId].getBody();
-            var content = tinymce.editors[editorId].getContent();
+        if (typeof gh.editor != 'undefined') {
+            var text = gh.editor.txt.text();
+            var content = gh.editor.txt.html();
             if (text.length < 3) {
                 gh.alert("内容字数过少，请完善内容");
                 return error++;
@@ -306,83 +305,51 @@ gh.load = function(url, fn, options) {
     });
 }
 gh.fn('editor', function(options) {
-    var $textarea = $(options.element);
-    gh.editorLoaded = gh.editorLoaded || 0
-
-    if (gh.editorLoaded) {
-        return initEditor(options);
-    } else {
-        gh.editorLoaded = 1;
-        var tinymceJs = "https://cdn.tiny.cloud/1/0dom44h04ohxupelroqlw346m3ekk9nibnvjy04zz7m0t6ve/tinymce/5/tinymce.min.js";
-        var tinymceLanguageJs = "/tiny.zh_CN.js";
-        gh.load(tinymceJs, function() {
-            gh.load(tinymceLanguageJs, function() {
-                initEditor(options);
-            });
-        });
-        return;
-    }
+    var editorJs = "//unpkg.com/wangeditor/dist/wangEditor.min.js";
+    gh.load(editorJs, function() {
+        initEditor(options);
+    });
 
     function initEditor(options) {
-        tinymce.init({
-            selector: options.element,
-            language: 'zh_CN',
-            plugins: 'code lists media table emoticons toc image hr imagetools advcode preview',
-            toolbar: 'undo redo cut copy paste pastetext  pagebreak emoticons hr forecolor toc blockquote styleselect bold italic alignleft aligncenter alignright bullist numlist table outdent indent image code preview',
-            toolbar_mode: 'floating',
-            images_upload_handler: imageUploadHandler
-        });
-
-        var editorId = gh.editorId || 0;
-        $textarea.attr("editor", editorId++);
+        var E = window.wangEditor;
+        gh.editor = new E(options.element);
+        gh.editor.config.menus = [
+            'head',
+            'bold',
+            //'fontSize',
+            'fontName',
+            'italic',
+            'underline',
+            'strikeThrough',
+            'indent',
+            //'lineHeight',
+            'foreColor',
+            //'backColor',
+            //'link',
+            'list',
+            'justify',
+            'quote',
+            'emoticon',
+            'image',
+            //'video',
+            'table',
+            'code',
+            'splitLine',
+            'undo',
+            'redo',
+        ]
+        gh.editor.config.fontNames = ['黑体', '仿宋', '楷体', '宋体', '微软雅黑'];
+        gh.editor.config.colors = ['#ab2b2b', '#069', '#337d56', '#9d5b8b', '#dcb183', '#f0f0f0', '#000'];
+        gh.editor.config.fontSizes = {
+            'x-small': { name: '10px', value: '1' },
+            'small': { name: '13px', value: '2' },
+            'normal': { name: '16px', value: '3' },
+            'large': { name: '18px', value: '4' },
+            'x-large': { name: '24px', value: '5' },
+            'xx-large': { name: '28px', value: '6' }
+        }
+        gh.editor.create();
     }
-
-
-    function imageUploadHandler(blobInfo, success, failure, progress) {
-        var xhr, formData;
-
-        xhr = new XMLHttpRequest();
-        xhr.withCredentials = false;
-        xhr.open('POST', gh.cdnParams.url);
-
-        xhr.upload.onprogress = function(e) {
-            progress(e.loaded / e.total * 100);
-        };
-
-        xhr.onload = function() {
-            var json;
-
-            if (xhr.status === 403) {
-                failure('HTTP Error: ' + xhr.status, { remove: true });
-                return;
-            }
-
-            if (xhr.status < 200 || xhr.status >= 300) {
-                failure('HTTP Error: ' + xhr.status);
-                return;
-            }
-
-            json = JSON.parse(xhr.responseText);
-
-            if (!json || typeof json.url != 'string') {
-                failure('Invalid JSON: ' + xhr.responseText);
-                return;
-            }
-
-            success(gh.cdnImgRoot + json.url + "!content");
-        };
-
-        xhr.onerror = function() {
-            failure('图片上传失败: ' + xhr.status);
-        };
-
-        formData = new FormData();
-        formData.append('file', blobInfo.blob(), blobInfo.filename());
-        formData.append('signature', gh.cdnParams.signature);
-        formData.append('policy', gh.cdnParams.policy);
-
-        xhr.send(formData);
-    };
 });
 gh.fn('imageUploader', function(options) {
     var $element = $(options.element);
@@ -431,9 +398,9 @@ gh.run('com.common', function() {
     $('.zone.breadcrumb a').not(':first').before('|');
     $('a[href=]').removeAttr('href');
     $('.body.main').css({ "min-height": $(window).height() - 160 });
-    $('.super').each(function() {
-        $(this).appendTo('body');
-    });
+    // $('.super').each(function() {
+    //     $(this).appendTo('body');
+    // });
     $('.popup[inline]').each(function() {
         var $element = $(this);
         if ($element.hasClass('logined') && !gh.logined) {
@@ -444,7 +411,7 @@ gh.run('com.common', function() {
             overlay_close: false,
             content_source: $element.attr('inline'),
             fullscreen: $element.attr('fullscreen') ? true : false,
-            width: $(window).width() > 700 ? 700 : null,
+            width: $(window).width() > 900 ? 800 : null,
             close_text: "关闭"
         });
     });
