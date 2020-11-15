@@ -305,7 +305,7 @@ gh.load = function(url, fn, options) {
     });
 }
 gh.fn('editor', function(options) {
-    var editorJs = "/wangEditor.min.js";
+    var editorJs = gh.cdn("/wangEditor.min.js");
     gh.load(editorJs, function() {
         initEditor(options);
     });
