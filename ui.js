@@ -49,7 +49,7 @@ gh.path = function(path) {
     return gh.host + path;
 }
 gh.cdn = function(path) {
-    if(gh.debug){
+    if (gh.debug) {
         return path;
     }
     return gh.cdnPublicRoot + path;
@@ -320,7 +320,7 @@ gh.fn('editor', function(options) {
             'head',
             'bold',
             //'fontSize',
-            'fontName',
+            //'fontName',
             'italic',
             'underline',
             'strikeThrough',
@@ -352,14 +352,22 @@ gh.fn('editor', function(options) {
             'xx-large': { name: '28px', value: '6' }
         }
         var i = 0;
-        var emotionMap = [];
+        var ldw = [];
         while (i++ < 16) {
-            emotionMap[i] = { alt: '[' + i + ']', src: gh.cdn('/lib/ldw/' + i + '.gif') }
+            ldw[i] = { alt: '[' + i + ']', src: gh.cdn('/lib/ldw/' + i + '.gif') }
+        }
+        var baidu = [];
+        while (i++ < 45) {
+            baidu[i] = { alt: '[' + i + ']', src: gh.cdn('/lib/baidu/' + i + '.png') }
         }
         gh.editor.config.emotions = [{
+            title: '百度',
+            type: 'image',
+            content: baidu
+        }, {
             title: '绿豆蛙',
             type: 'image',
-            content: emotionMap
+            content: ldw
         }]
         gh.editor.config.uploadImgServer = gh.cdnParams.bucket;
         gh.editor.config.uploadImgParams = {
