@@ -49,6 +49,9 @@ gh.path = function(path) {
     return gh.host + path;
 }
 gh.cdn = function(path) {
+    if(gh.debug){
+        return path;
+    }
     return gh.cdnPublicRoot + path;
 }
 gh.alert = function(message, timeout, fn, type) {
@@ -348,6 +351,16 @@ gh.fn('editor', function(options) {
             'x-large': { name: '24px', value: '5' },
             'xx-large': { name: '28px', value: '6' }
         }
+        var i = 0;
+        var emotionMap = [];
+        while (i++ < 52) {
+            emotionMap[i] = { alt: '[' + i + ']', src: gh.cdn('/lib/ldw/' + i + '.gif') }
+        }
+        gh.editor.config.emotions = [{
+            title: '绿豆蛙',
+            type: 'image',
+            content: emotionMap
+        }]
         gh.editor.config.uploadImgServer = gh.cdnParams.bucket;
         gh.editor.config.uploadImgParams = {
             policy: gh.cdnParams.policy,
