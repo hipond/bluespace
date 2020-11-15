@@ -305,7 +305,7 @@ gh.load = function(url, fn, options) {
     });
 }
 gh.fn('editor', function(options) {
-    var editorJs = "//unpkg.com/wangeditor/dist/wangEditor.min.js";
+    var editorJs = "/wangEditor.min.js";
     gh.load(editorJs, function() {
         initEditor(options);
     });
@@ -348,7 +348,35 @@ gh.fn('editor', function(options) {
             'x-large': { name: '24px', value: '5' },
             'xx-large': { name: '28px', value: '6' }
         }
+        gh.editor.config.uploadImgServer = gh.cdnParams.bucket;
+        gh.editor.config.uploadImgParams = {
+            policy: gh.cdnParams.policy,
+            signature: gh.cdnParams.signature
+        }
+        gh.editor.config.uploadFileName = 'file';
+        gh.editor.config.customAlert = function(msg) {
+            gh.alert(msg);
+        }
+        gh.editor.config.uploadImgHooks = {
+            success: function(xhr) {
+                console.log('success', xhr)
+            },
+            fail: function(xhr, editor, resData) {
+                console.log('fail', resData)
+            },
+            error: function(xhr, editor, resData) {
+                console.log('error', xhr, resData)
+            },
+            timeout: function(xhr) {
+                console.log('timeout')
+            },
+            customInsert: function(insertImgFn, result) {
+                var url = gh.cdnImgRoot + result.url;
+                insertImgFn(url)
+            }
+        }
         gh.editor.create();
+
     }
 });
 gh.fn('imageUploader', function(options) {
