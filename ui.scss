@@ -212,7 +212,7 @@ th:not([align]) {
   box-shadow: none;
 }
 .e1 {
-  box-shadow: 0 0 3px #aaa;
+  box-shadow: 0 0 2px #aaa;
 }
 /*间距、填充*/
 .pd0 {
@@ -262,7 +262,7 @@ th:not([align]) {
   margin-left: 8px !important;
 }
 .ease {
-  box-shadow: 0 0 3px #aaa;
+  box-shadow: 0 0 2px #aaa;
   padding: 12px;
   background-color: #fdfdfd;
   border-radius: 4px;
@@ -368,7 +368,7 @@ textarea {
   border: none;
   line-height: 24px;
   height: 24px;
-  box-shadow: 0 0px 2px 0 rgba(0, 0, 0, .18), 0 0px 2px 0 rgba(0, 0, 0, .15);
+  box-shadow: 0 0px 1px 0 rgba(0, 0, 0, .18), 0 0px 1px 0 rgba(0, 0, 0, .15);
   &.focus {
     background-color: $c1 !important;
     color: #f0f0f0 !important;
@@ -677,7 +677,7 @@ fieldset {
   cursor: pointer;
   border-radius: 3px;
   &.checked {
-    background-color: #3b7960;
+    background-color: $c1;
     color: #f9f9f9;
   }
 }
