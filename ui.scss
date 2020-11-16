@@ -944,15 +944,21 @@ h3 {
 }
 
 .content {
-  .ql-code-block-container{
-    box-shadow: 0 0 5px #555 inset;
-    background-color: #23241f;
-    color: #f8f8f2;
-    overflow: visible;
-    font-family: monospace;
-    cursor: text;
-    padding:15px;
-    border-radius:2px;
+  &.post {
+    ol{
+      list-style-type: decimal;
+    }
+    ul{
+      list-style-type: square;
+    }
+    code{
+      font-family: monospace;
+      background-color: #f1f1f1;
+      border-radius: 3px;
+      padding: 3px 5px;
+      margin: 0 3px;
+      border:1px #ddd solid;
+    }
   }
 }
 .eleImg{
