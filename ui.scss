@@ -523,6 +523,12 @@ fieldset {
     .userbar {
       border: none;
     }
+    .meta {
+      p{
+        padding: 0 15px;
+        font-size:14px;
+      }
+    }
   }
   .userbar {
     .avatar {
@@ -703,7 +709,7 @@ div {
 }
 .zone.topics .p.even,
 .zone.comments .p.even {
-  background-color: #edf1f2;
+  background-color: #f8f8f8;
   border-bottom: #bbb;
   border-top: 1px solid #f0f0f0;
   border-bottom: 1px solid #f0f0f0;
