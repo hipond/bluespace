@@ -478,7 +478,6 @@ gh.run('com.common', function() {
     $(window).scroll(function(event) {
         if ($(window).scrollTop() > 100) {
             var offset = $(window).width() - $body.width();
-            console.log(offset)
             $anchor.css({ right: offset/2 + 20 });
             $anchor.show();
         } else {
