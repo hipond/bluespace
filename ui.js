@@ -471,6 +471,23 @@ gh.run('com.common', function() {
     if (location.pathname == '/') {
         $('.zone.breadcrumb *').css({ "cursor": "auto" });
     }
+
+    // 返回顶部
+    var $anchor = $('#anchor');
+    var $body = $('.body.main');
+    $(window).scroll(function(event) {
+        if ($(window).scrollTop() > 100) {
+            var offset = $(window).width() - $body.width();
+            console.log(offset)
+            $anchor.css({ right: offset/2 + 20 });
+            $anchor.show();
+        } else {
+            $anchor.hide();
+        }
+    });
+    $anchor.click(function(event) {
+        $('body,html').animate({ scrollTop: 0 }, 500);
+    });
 });
 
 // 标签渲染
