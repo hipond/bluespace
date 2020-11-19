@@ -261,7 +261,7 @@ th:not([align]) {
   margin-left: 8px !important;
 }
 .ease {
-  box-shadow: 0 0 2px #aaa;
+  box-shadow: 0 0 1px #aaa;
   padding: 12px;
   background-color: #fdfdfd;
   border-radius: 4px;
@@ -315,7 +315,7 @@ body {
 .on {
   display: block !important;
 }
-input {
+input.ui {
   line-height: 30px;
   border: 1px solid #ccc;
   border-radius: 2px;
@@ -325,8 +325,8 @@ input {
   font-size: 16px !important;
   color: #555;
 }
-form label,
-.form label {
+form label.ui,
+.form label.ui {
   display: inline-block;
   width: 70px;
   line-height: 40px;
@@ -467,6 +467,9 @@ fieldset {
 }
 .body {
   &.main {
+    &.md{
+      max-width: 1600px;
+    }
     max-width: 1000px;
     margin: 0 auto;
   }
@@ -702,7 +705,7 @@ div {
     padding: 8px 0;
     line-height: 24px;
     .tag {
-      line-height: 18px;
+      color:$c0;
     }
   }
 }

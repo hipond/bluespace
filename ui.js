@@ -224,8 +224,8 @@ gh.data = function(element) {
         var $area = $(this);
         var key = $area.attr('name');
         if (typeof gh.editor != 'undefined') {
-            var text = gh.editor.txt.text();
-            var content = gh.editor.txt.html();
+            var text = gh.editorText();
+            var content = gh.editorHTML();
             if (text.length < 3) {
                 gh.alert("内容字数过少，请完善内容");
                 return error++;
@@ -398,6 +398,54 @@ gh.fn('editor', function(options) {
         }
         gh.editor.create();
 
+        gh.editorText = function() {
+            return gh.editor.txt.text();
+        }
+        gh.editorHTML = function() {
+            return gh.editor.txt.html();
+        }
+
+    }
+});
+gh.fn('editormd', function(options) {
+    var editorJs = gh.cdn("/editormd/editormd.min.js");
+    gh.load(editorJs, function() {
+        initEditor(options);
+    });
+
+    function initEditor(options) {
+        gh.editor = editormd("editor", {
+            imageUpload: true,
+            imageFormats: ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
+            imageUploadURL: gh.cdnParams.bucket,
+            //previewTheme: "dark",
+            //editorTheme: "pastel-on-dark",
+            markdown: $(options.element).html() || "hi.",
+            codeFold: true,
+            //syncScrolling : false,
+            saveHTMLToTextarea: true,
+            searchReplace: true,
+            watch: true,
+            //htmlDecode: "style,script,iframe|on*",    
+            toolbar: true,
+            previewCodeHighlight: true,
+            emoji: true,
+            taskList: true,
+            tocm: true,
+            tex: true,
+            flowChart: true,
+            sequenceDiagram: true,
+            // width: "100%",
+            // height: "100%",
+            path: gh.cdn("/editormd/lib/")
+        });
+
+        gh.editorText = function() {
+            return gh.editor.getMarkdown();
+        }
+        gh.editorHTML = function() {
+            return gh.editor.getMarkdown();
+        }
     }
 });
 gh.fn('imageUploader', function(options) {
@@ -417,12 +465,11 @@ gh.fn('imageUploader', function(options) {
             gh.log('fileInput:empty');
         } else {
             var data = new FormData();
-            data.append("signature", options.signature);
-            data.append("policy", options.policy);
+            data.append("signature", gh.cdnParams.signature);
+            data.append("policy", gh.cdnParams.policy);
             data.append("file", $fileInput.get(0).files[0]);
-            gh.log(data);
             $.ajax({
-                url: options.url,
+                url: gh.cdnParams.bucket,
                 data: data,
                 type: "POST",
                 async: false,
@@ -478,7 +525,7 @@ gh.run('com.common', function() {
     $(window).scroll(function(event) {
         if ($(window).scrollTop() > 100) {
             var offset = $(window).width() - $body.width();
-            $anchor.css({ right: offset/2 + 20 });
+            $anchor.css({ right: offset / 2 + 20 });
             $anchor.show();
         } else {
             $anchor.hide();
@@ -487,6 +534,22 @@ gh.run('com.common', function() {
     $anchor.click(function(event) {
         $('body,html').animate({ scrollTop: 0 }, 500);
     });
+
+    // mardown 渲染
+    if (gh.markdown) {
+        var $markdown = $('#markdown');
+        var html = $markdown.html();
+        $markdown.empty();
+        editormd.markdownToHTML("markdown", {
+            markdown : html,
+            htmlDecode: "style,script,iframe",
+            emoji: true,
+            taskList: true,
+            tex: true,
+            flowChart: true,
+            sequenceDiagram: true,
+        });
+    }
 });
 
 // 标签渲染
@@ -532,7 +595,7 @@ gh.run('com.tab', function() {
 gh.run('com.form', function() {
     // ui
     $('input[type=hidden]').addClass('hidden');
-    $('input').not('[type=hidden]').addClass('input');
+    $('input.ui').not('[type=hidden]').addClass('input');
     // 单选框
     $('.radio').each(function() {
         var $radio = $(this);
@@ -555,7 +618,7 @@ gh.run('com.form', function() {
 
     // 自适应
     var auto = function() {
-        $('.input').each(function() {
+        $('.input.ui').each(function() {
             var $input = $(this);
             var $parent = $input.closest('.body.main');
             var $label = $parent.children('label,.label').first();
