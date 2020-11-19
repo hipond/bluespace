@@ -502,7 +502,7 @@ fieldset {
     }
     .title {
       position: relative;
-      h3 {
+      h1 {
         text-align: center;
         padding: 10px 6px;
         font-size: 22px;
@@ -817,10 +817,26 @@ div {
     }
   }
   h1 {
-    font-size: 18px !important;
+    font-size: 24px !important;
     font-weight: bold;
   }
   h2 {
+    font-size: 22px !important;
+    font-weight: bold;
+  }
+  h3 {
+    font-size: 20px !important;
+    font-weight: bold;
+  }
+  h4 {
+    font-size: 18px !important;
+    font-weight: bold;
+  }
+  h5 {
+    font-size: 17px !important;
+    font-weight: bold;
+  }
+  h6 {
     font-size: 16px !important;
     font-weight: bold;
   }
@@ -937,7 +953,7 @@ img {
     }
   }
 }
-h3 {
+h1 {
   &.title {
     font-size: 20px;
     font-weight: bold;
