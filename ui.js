@@ -414,13 +414,17 @@ gh.fn('editormd', function(options) {
     });
 
     function initEditor(options) {
+        var $markdown = $(options.element);
+        var html = $markdown.html();
+        $markdown.empty();
+
         gh.editor = editormd("editor", {
             imageUpload: true,
             imageFormats: ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
             imageUploadURL: gh.cdnParams.bucket,
             //previewTheme: "dark",
             //editorTheme: "pastel-on-dark",
-            markdown: $(options.element).html() || "hi.",
+            markdown: html || "hi.",
             codeFold: true,
             //syncScrolling : false,
             saveHTMLToTextarea: true,
