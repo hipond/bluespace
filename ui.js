@@ -524,7 +524,7 @@ gh.run('com.common', function() {
     }
 
     // 返回顶部
-    var $anchor = $('#anchor');
+    var $anchor = $('.anchor');
     var $body = $('.body.main');
     $(window).scroll(function(event) {
         if ($(window).scrollTop() > 100) {
@@ -535,17 +535,21 @@ gh.run('com.common', function() {
             $anchor.hide();
         }
     });
-    $anchor.click(function(event) {
-        $('body,html').animate({ scrollTop: 0 }, 500);
+    $('.anchor.topper').on('click', function(event) {
+        $body.animate({ scrollTop: 0 }, 500);
+    });
+    $('.anchor.toc').on('click', function(event) {
+        $('#toc').toggle();
+    });
+    $('#toc').on('click', function(event) {
+        $('#toc').hide();
     });
 
     // mardown 渲染
     if (gh.markdown) {
-        var $markdown = $('#markdown');
-        var html = $markdown.html();
-        $markdown.empty();
         editormd.markdownToHTML("markdown", {
-            markdown : html,
+            tocm: true,
+            tocContainer: "#toc",
             htmlDecode: "style,script,iframe",
             emoji: true,
             taskList: true,
@@ -553,6 +557,7 @@ gh.run('com.common', function() {
             flowChart: true,
             sequenceDiagram: true,
         });
+
     }
 });
 
