@@ -536,7 +536,7 @@ gh.run('com.common', function() {
         }
     });
     $('.anchor.topper').on('click', function(event) {
-        $body.animate({ scrollTop: 0 }, 500);
+        $("html,body").animate({ scrollTop: 0 }, 500);
     });
     $('.anchor.toc').on('click', function(event) {
         $('#toc').toggle();
