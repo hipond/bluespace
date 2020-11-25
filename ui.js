@@ -1,5 +1,4 @@
-// v1.0.1
-gh = {};
+gh = gh || {};
 gh.host = "";
 gh.cdnPublicRoot = "";
 gh.cdnImgRoot = "";

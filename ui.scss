@@ -261,10 +261,9 @@ th:not([align]) {
   margin-left: 8px !important;
 }
 .ease {
-  box-shadow: 0 0 1px #aaa;
   padding: 12px;
-  background-color: #fdfdfd;
-  border-radius: 4px;
+  border-radius: 0px;
+  border:1px solid #f2f2f2;
 }
 /*位序*/
 .h,
@@ -281,7 +280,7 @@ th:not([align]) {
   clear: both;
 }
 body {
-  background-color: #f0f0f0;
+  background-color: #fefefe;
   color: $c0;
   font-size: 16px;
   font-family: 微软雅黑, "Droid Sans", Helvetica, Tahoma, SimSun, sans-serif;
@@ -408,9 +407,6 @@ fieldset {
 .header {
   height: 50px;
   overflow: hidden;
-  box-shadow: 0 1px 7px #bbb;
-  background-color: #fefefe;
-  border-top: 4px solid $c1;
   .logo {
     .x1 {
       margin-top: 10px;
@@ -492,8 +488,7 @@ fieldset {
   }
   &.menu {
     .ease {
-      box-shadow: 0 0 3px #aaa;
-      border-radius: 4px;
+      border-radius: 0px;
     }
   }
   &.topic {
@@ -508,7 +503,6 @@ fieldset {
         font-size: 22px;
         font-weight: bold;
         line-height: 35px;
-        background-color: none;
         margin: 0 10px 6px 10px;
       }
       div {
@@ -590,7 +584,6 @@ fieldset {
         padding: 20px 10px;
         overflow: hidden;
         word-break: break-all;
-        background-color: #fefefe;
         color: #555;
         font-size: 16px;
         line-height: 30px;
@@ -644,7 +637,7 @@ fieldset {
     z-index: -1;
     .box {
       position: absolute;
-      top: -15px;
+      top: -18px;
       right: 10px;
       margin: 0;
       height: 60px;
@@ -655,7 +648,6 @@ fieldset {
         height: 100%;
         top: 0;
         left: 0;
-        box-shadow: 20px 0px 20px 0px #f0f0f0 inset, -20px 0px 20px 0px #f0f0f0 inset;
       }
     }
     img {
@@ -979,9 +971,6 @@ h1 {
 }
 .eleImg{
   width:48px;
-}
-.comment-cover{
-  box-shadow:0 0 1px #aaa;
 }
 
 .anchor {
