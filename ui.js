@@ -1,7 +1,7 @@
 gh = gh || {};
-gh.host = "";
-gh.cdnPublicRoot = "";
-gh.cdnImgRoot = "";
+gh.host = gh.host || "";
+gh.cdnPublicRoot = gh.cdnPublicRoot || "";
+gh.cdnImgRoot = gh.cdnImgRoot || "";
 gh.uniqid = 0;
 gh.kvMap = {};
 gh.regex = {};
