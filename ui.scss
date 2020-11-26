@@ -264,7 +264,7 @@ th:not([align]) {
   padding: 12px;
   border-radius: 0px;
   border:1px solid #f2f2f2;
-  background-color: #fefefe;
+  background-color: $bg;
 }
 /*位序*/
 .h,
@@ -281,7 +281,7 @@ th:not([align]) {
   clear: both;
 }
 body {
-  background-color: #fefefe;
+  background-color: $bg;
   color: $c0;
   font-size: 16px;
   font-family: 微软雅黑, "Droid Sans", Helvetica, Tahoma, SimSun, sans-serif;
@@ -493,7 +493,7 @@ fieldset {
   }
   &.topic {
     .ease {
-      background-color: #fefefe;
+      background-color: $bg;
     }
     .title {
       position: relative;
@@ -575,7 +575,7 @@ fieldset {
       margin: 30px 0;
     }
     .comment {
-      background-color: #fefefe;
+      background-color: $bg;
       border: 1px solid #e5e5e5;
       border-radius: 4px;
       padding: 5px;
@@ -590,7 +590,6 @@ fieldset {
       }
     }
     .userbar {
-      background-color: #fcfcfc;
       border-bottom: 1px solid #f5f5f5;
     }
   }
@@ -601,7 +600,6 @@ fieldset {
         line-height: 120px;
         font-size: 20px;
         text-align: center;
-        background-color: #fff;
         border: 1px solid #eee;
         cursor: pointer;
       }
