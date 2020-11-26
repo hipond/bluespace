@@ -315,6 +315,7 @@ gh.fn('editor', function(options) {
     function initEditor(options) {
         var E = window.wangEditor;
         gh.editor = new E(options.element);
+        gh.editor.config.height = 400;
         gh.editor.config.menus = [
             'head',
             'bold',
