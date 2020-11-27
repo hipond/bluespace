@@ -112,11 +112,11 @@ table {
   th {
     background-color: #eee;
     padding: 5px 10px;
-    border: 1px solid #ccc;
+    border: 1px solid $bgBorder;
   }
   td {
     padding: 5px 10px;
-    border: 1px solid #ccc;
+    border: 1px solid $bgBorder;
   }
 }
 td,
@@ -263,7 +263,7 @@ th:not([align]) {
 .ease {
   padding: 12px;
   border-radius: 0px;
-  border:1px solid #f2f2f2;
+  border:1px solid $bgBorder;
   background-color: $bg;
 }
 /*位序*/
@@ -317,7 +317,7 @@ body {
 }
 input.ui {
   line-height: 30px;
-  border: 1px solid #ddd;
+  border: 1px solid $bgBorder;
   border-radius: 2px;
   width: 200px;
   margin: 5px;
@@ -338,7 +338,7 @@ legend {
 }
 textarea {
   padding: 10px;
-  border: 1px solid #eee;
+  border: 1px solid $bgBorder;
   min-width: 300px;
   min-height: 100px;
   background-color: #fff;
@@ -358,7 +358,7 @@ textarea {
 }
 .btn {
   display: inline-block;
-  background-color: #eee;
+  background-color: $bgBtn;
   border-radius: 3px;
   cursor: pointer;
   padding: 0 4px 0 6px !important;
@@ -376,7 +376,7 @@ textarea {
     color: #f0f0f0 !important;
   }
   &.in {
-    background-color: #bbb !important;
+    background-color: $c1 !important;
     color: #f0f0f0 !important;
   }
   .icon {
@@ -386,7 +386,7 @@ textarea {
 }
 fieldset {
   padding: 10px;
-  border: 1px solid #eee;
+  border: 1px solid $bgBorder;
 }
 .tr {
   text-align: right;
@@ -407,6 +407,7 @@ fieldset {
 .header {
   height: 50px;
   overflow: hidden;
+  background-color: $bgHeader;
   .logo {
     .x1 {
       margin-top: 10px;
@@ -473,7 +474,7 @@ fieldset {
 .zone {
   margin: 15px 10px;
   &.breadcrumb {
-    color: #ccc;
+    color: $bgBorder;
     a {
       margin: 0 0 0 2px;
       padding: 0px;
@@ -532,7 +533,7 @@ fieldset {
       overflow: hidden;
       width: 40px;
       height: 40px;
-      border: 3px solid #fff;
+      border: 3px solid $bgBtn;
       border-radius: 300px;
       color: #eee;
       font-size: 24px;
@@ -576,7 +577,7 @@ fieldset {
     }
     .comment {
       background-color: $bg;
-      border: 1px solid #e5e5e5;
+      border: 1px solid $bgBorder;
       border-radius: 4px;
       padding: 5px;
       .content {
@@ -590,7 +591,7 @@ fieldset {
       }
     }
     .userbar {
-      border-bottom: 1px solid #f5f5f5;
+      border-bottom: 1px solid $bgBorder;
     }
   }
   &.add {
@@ -600,7 +601,7 @@ fieldset {
         line-height: 120px;
         font-size: 20px;
         text-align: center;
-        border: 1px solid #eee;
+        border: 1px solid $bgBorder;
         cursor: pointer;
       }
     }
@@ -657,7 +658,7 @@ fieldset {
   text-align: center;
   * {
     font-size: 12px!important;
-    color: #bbb;
+    color: #777;
     line-height: 16px;
   }
 }
@@ -699,11 +700,12 @@ div {
 }
 .zone.topics .p.even,
 .zone.comments .p.even {
-  background-color: #f8f8f8;
-  border-bottom: #bbb;
-  border-top: 1px solid #f0f0f0;
-  border-bottom: 1px solid #f0f0f0;
+  background-color: $bgEven;
   border-radius: 3px;
+}
+.zone.topics .p:hover,
+.zone.comments .p:hover {
+  background-color: $bgBorder;
 }
 .tab {
   ul {
@@ -727,7 +729,7 @@ div {
   }
   .head {
     &.classic {
-      border-bottom: 1px solid #eee;
+      border-bottom: 1px solid $bgBorder;
       li {
         &.key {
           padding: 0 5px 0 5px;
@@ -764,7 +766,6 @@ div {
           padding: 2px 0 2px 0;
           margin-right: 5px;
           line-height: 30px;
-          background-color: #f7f7f7;
         }
       }
     }
@@ -964,7 +965,7 @@ h1 {
       border-radius: 3px;
       padding: 1px 5px;
       margin: 0 3px;
-      border:1px #ddd solid;
+      border:1px solid $bgBorder;
     }
     blockquote {
       display: block;
