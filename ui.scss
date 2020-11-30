@@ -953,6 +953,10 @@ h1 {
 
 .content {
   &.post {
+    *{
+        background-color:transparent!important;
+    }
+
     ol{
       list-style-type: decimal;
     }
@@ -974,7 +978,7 @@ h1 {
       margin: 10px 0;
       line-height: 1.4;
       font-size: 100%;
-      background-color: #f1f1f1;
+      background-color: #f1f1f1!important;
     }
   }
 }
