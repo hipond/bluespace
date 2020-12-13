@@ -113,10 +113,14 @@ table {
     background-color: #eee;
     padding: 5px 10px;
     border: 1px solid $bgBorder;
+    white-space:nowrap;
   }
   td {
     padding: 5px 10px;
     border: 1px solid $bgBorder;
+  }
+  p {
+    text-indent:0px!important;
   }
 }
 td,
