@@ -412,6 +412,7 @@ fieldset {
   height: 50px;
   overflow: hidden;
   background-color: $bgHeader;
+  border-bottom:1px solid #e0e0e0;
   .logo {
     .x1 {
       margin-top: 10px;
@@ -421,8 +422,8 @@ fieldset {
       font-size: 16px;
       line-height: 14px;
       color: #fff;
-      background-color: $c2;
-      border-radius: 30px;
+      background-color: $c1;
+      border-radius: 0px;
     }
     .x2 {
       text-indent: 5px;
@@ -433,6 +434,7 @@ fieldset {
       font-size: 38px;
       color: $c0;
       letter-spacing: -2px;
+
     }
   }
   a {
