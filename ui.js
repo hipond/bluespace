@@ -559,7 +559,7 @@ gh.run('com.common', function() {
         });
 
     }
-    $('.zone.footer .statement').html("请遵守相关法规、尊重他人版权<br/>系统有权清理违法信息及版权争议内容");
+    $('.zone.footer .statement').html("");
     $('.zone.breadcrumb').after(gh.segments.region);
     if (gh.regionPath) {
         var $regionZone = $('.zone.region .tab.region');
