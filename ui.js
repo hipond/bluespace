@@ -562,6 +562,9 @@ gh.run('com.common', function() {
     $('.zone.footer .statement').html("");
     $('.zone.breadcrumb').after(gh.segments.region);
     if (gh.regionPath) {
+        if (gh.regionPath.collapse) {
+            $('.zone.region').addClass('optional menu hide');
+        }
         var $regionZone = $('.zone.region .tab.region');
         if (gh.regionPath.region) {
             var $regionKey = $regionZone.find('ul.thin li.key:contains(' + gh.regionPath.region + ')').addClass('focus');
