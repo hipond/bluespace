@@ -411,8 +411,8 @@ fieldset {
 .header {
   height: 50px;
   overflow: hidden;
-  background-color: $bgHeader;
   border-bottom:1px solid #e0e0e0;
+  background-color: $bgHeader;
   .logo {
     .x1 {
       margin-top: 10px;
@@ -468,14 +468,12 @@ fieldset {
 .header .f24 {
   font-family: "logo";
 }
-.body {
-  &.main {
-    &.md{
-      max-width: 1600px;
-    }
-    max-width: 1000px;
-    margin: 0 auto;
+.pagen {
+  &.md{
+    max-width: 1600px;
   }
+  max-width: 1000px;
+  margin: 0 auto;
 }
 .zone {
   margin: 15px 10px;

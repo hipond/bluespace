@@ -497,7 +497,7 @@ gh.fn('imageUploader', function(options) {
 gh.run('com.common', function() {
     $('.zone.breadcrumb a').not(':first').before('|');
     $('a[href=]').removeAttr('href');
-    $('.body.main').css({ "min-height": $(window).height() - 160 });
+    $('.pagen').css({ "min-height": $(window).height() - 160 });
     // $('.super').each(function() {
     //     $(this).appendTo('body');
     // });
@@ -525,7 +525,7 @@ gh.run('com.common', function() {
 
     // 返回顶部
     var $anchor = $('.anchor');
-    var $body = $('.body.main');
+    var $body = $('.pagen');
     $(window).scroll(function(event) {
         if ($(window).scrollTop() > 100) {
             var offset = $(window).width() - $body.width();
@@ -649,7 +649,7 @@ gh.run('com.form', function() {
     var auto = function() {
         $('.input.ui').each(function() {
             var $input = $(this);
-            var $parent = $input.closest('.body.main');
+            var $parent = $input.closest('.pagen');
             var $label = $parent.children('label,.label').first();
             var offset = $label.width() || 150;
             var toWidth = $parent.width() - offset - 50;
