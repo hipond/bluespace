@@ -497,7 +497,7 @@ gh.fn('imageUploader', function(options) {
 gh.run('com.common', function() {
     $('.zone.breadcrumb a').not(':first').before('|');
     $('a[href=]').removeAttr('href');
-    $('.pagen').css({ "min-height": $(window).height() - 160 });
+    $('.body.pagen').css({ "min-height": $(window).height() - 160 });
     // $('.super').each(function() {
     //     $(this).appendTo('body');
     // });
@@ -525,7 +525,7 @@ gh.run('com.common', function() {
 
     // 返回顶部
     var $anchor = $('.anchor');
-    var $body = $('.pagen');
+    var $body = $('.body.pagen');
     $(window).scroll(function(event) {
         if ($(window).scrollTop() > 100) {
             var offset = $(window).width() - $body.width();

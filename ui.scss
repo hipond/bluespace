@@ -266,7 +266,7 @@ th:not([align]) {
 }
 .ease {
   padding: 12px;
-  border-radius: 0px;
+  border-radius: 3px;
   border:1px solid $bgBorder;
   background-color: $bg;
 }
@@ -364,16 +364,17 @@ textarea {
   display: inline-block;
   background-color: $bgBtn;
   border-radius: 3px;
+  border: 1px solid #ddd;
   cursor: pointer;
   padding: 0 4px 0 6px !important;
   margin: 5px;
   color: $c0;
-  border: none;
   line-height: 28px;
   height: 28px;
   &.focus {
     background-color: $c1 !important;
     color: #f0f0f0 !important;
+    border: 1px solid $c1;
   }
   &.off {
     background-color: #999 !important;
@@ -382,6 +383,7 @@ textarea {
   &.in {
     background-color: $c1 !important;
     color: #f0f0f0 !important;
+    border: 1px solid $c1;
   }
   .icon {
     font-size: 16px;
@@ -659,6 +661,7 @@ fieldset {
   }
 }
 .footer {
+  margin-top:50px;
   text-align: center;
   * {
     font-size: 12px!important;
@@ -705,11 +708,11 @@ div {
 .zone.topics .p.even,
 .zone.comments .p.even {
   background-color: $bgEven;
-  border-radius: 3px;
+  border-radius: 10px;
 }
 .zone.topics .p:hover,
 .zone.comments .p:hover {
-  background-color: $bgBorder;
+  background-color: #E8F0FE;
 }
 .tab {
   ul {
@@ -1000,6 +1003,7 @@ h1 {
     cursor: pointer; 
     border-radius: 50px;
     padding: 10px;
+    box-shadow:0 1px 6px #bbb;
     &.topper {
       bottom: 20px; 
     }
