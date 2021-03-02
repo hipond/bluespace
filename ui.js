@@ -668,7 +668,7 @@ gh.run('com.form', function() {
         auto();
     });
     // 表单提交流
-    $('.btn[api],.icon[api]').each(function() {
+    $('.btn[api],.icon[api],.api[api]').each(function() {
         var $btn = $(this);
         $btn.on('click', function() {
             return gh.runPostFlow($btn);

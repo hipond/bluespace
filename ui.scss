@@ -268,7 +268,8 @@ th:not([align]) {
   padding: 12px;
   border-radius: 3px;
   border:1px solid $bgBorder;
-  background-color: $bg;
+  background-color: #fff;
+  box-shadow:0px 0px 1px #ccc;
 }
 /*位序*/
 .h,
@@ -415,6 +416,7 @@ fieldset {
   overflow: hidden;
   border-bottom:1px solid #e0e0e0;
   background-color: $bgHeader;
+  box-shadow:0px 0px 1px #ccc;
   .logo {
     .x1 {
       margin-top: 10px;
@@ -447,23 +449,13 @@ fieldset {
     float: left;
     color: #555;
   }
-  .userbar {
-    div {
-      float: left;
-      height: 20px;
-      line-height: 20px;
-      margin: 13px 0 0 0;
-    }
-    .username {
-      padding: 0 5px;
-      font-size: 12px;
-      border-radius: 3px 0 0 3px;
-    }
-    .score {
-      padding: 0 5px;
-      font-size: 12px;
-      border-radius: 0 3px 3px 0;
-    }
+  .login{
+    display:block;
+    float:right;
+  }
+  .panel{
+    display:block;
+    float:right;
   }
 }
 .header .logo,
@@ -478,8 +470,9 @@ fieldset {
   margin: 0 auto;
 }
 .zone {
-  margin: 15px 10px;
+  margin: 30px 10px;
   &.breadcrumb {
+    margin: 15px 10px;
     color: $bgBorder;
     a {
       margin: 0 0 0 2px;
@@ -499,9 +492,6 @@ fieldset {
     }
   }
   &.topic {
-    .ease {
-      background-color: $bg;
-    }
     .title {
       position: relative;
       h1 {
@@ -998,7 +988,7 @@ h1 {
     border: none;
     right:0;
     outline: none; 
-    background-color: #eee; 
+    background-color: #f9f9f9; 
     color: #999; 
     cursor: pointer; 
     border-radius: 50px;
