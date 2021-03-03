@@ -10,13 +10,13 @@
 }
 
 @font-face {
-  font-family: 'iconfont';  /* project id 2142143 */
-  src: url('//at.alicdn.com/t/font_2142143_3av8ymcadps.eot');
-  src: url('//at.alicdn.com/t/font_2142143_3av8ymcadps.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_2142143_3av8ymcadps.woff2') format('woff2'),
-  url('//at.alicdn.com/t/font_2142143_3av8ymcadps.woff') format('woff'),
-  url('//at.alicdn.com/t/font_2142143_3av8ymcadps.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_2142143_3av8ymcadps.svg#iconfont') format('svg');
+  font-family: 'iconfont';
+  src: url('//at.alicdn.com/t/font_2142143_hec15p68e3k.eot');
+  src: url('//at.alicdn.com/t/font_2142143_hec15p68e3k.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_2142143_hec15p68e3k.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_2142143_hec15p68e3k.woff') format('woff'),
+  url('//at.alicdn.com/t/font_2142143_hec15p68e3k.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_2142143_hec15p68e3k.svg#iconfont') format('svg');
 }
 
 article,
@@ -202,13 +202,13 @@ th:not([align]) {
   font-size: 18px;
 }
 .f20 {
-  font-size: 20px;
+  font-size: 20px!important;;
 }
 .f24 {
-  font-size: 24px;
+  font-size: 24px!important;;
 }
 .f28 {
-  font-size: 28px;
+  font-size: 28px!important;;
 }
 /*效果*/
 .e0 {
@@ -352,6 +352,10 @@ textarea {
 .item {
   .textarea {
     min-height: 200px;
+    box-shadow:0 1px 1px #eee inset;
+  }
+  fieldset{
+    border:1px solid #f9f0f9;
   }
 }
 .hidden {
@@ -614,9 +618,8 @@ fieldset {
   }
   &.area {
     .ease {
-      h1 {
-        margin: 40px 0 10px 0;
-        text-align: center;
+      h2 {
+        margin: 40px 0 10px 10px;
       }
     }
   }
@@ -701,8 +704,17 @@ div {
   border-radius: 10px;
 }
 .zone.topics .p:hover,
-.zone.comments .p:hover {
-  background-color: #E8F0FE;
+.zone.comments {
+  .ord {
+      color: #ccc;
+      display:block;
+      float:right;
+      font-size:14px;
+      margin:0 10px;
+  }
+  .p:hover {
+      background-color: #E8F0FE;
+  }
 }
 .tab {
   ul {
@@ -1032,4 +1044,14 @@ h1 {
 
 #toc:hover {
   overflow: auto;
+}
+.parting{
+  height:180px;
+  overflow:hidden;
+}
+
+.collapse.partial .flag{
+  cursor:pointer;
+  line-height:40px;
+  color:#999;
 }

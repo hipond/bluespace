@@ -321,22 +321,22 @@ gh.fn('editor', function(options) {
             'bold',
             //'fontSize',
             //'fontName',
-            'italic',
-            'underline',
+            //'italic',
+            //'underline',
             'strikeThrough',
-            'indent',
+            //'indent',
             //'lineHeight',
             'foreColor',
             //'backColor',
             //'link',
             'list',
-            'justify',
-            'quote',
+            //'justify',
+            //'quote',
             'emoticon',
             'image',
             //'video',
             'table',
-            'code',
+            //'code',
             'splitLine',
             'undo',
             'redo',
@@ -579,6 +579,18 @@ gh.run('com.common', function() {
         }
 
     }
+
+    // 段落自折叠
+    $('.collapse.partial .wrapper').addClass('parting');
+    $('.collapse.partial .flag').on('click', function(event) {
+        var $wrapper = $(this).prev('.wrapper');
+        $wrapper.toggleClass('parting');
+        if($wrapper.hasClass('parting')){
+            $(this).text('---- 阅读全文 ----');
+        }else{
+            $(this).text('---- 折叠内容 ----');
+        }
+    });
 });
 
 // 标签渲染
