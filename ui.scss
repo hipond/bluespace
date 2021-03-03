@@ -1,4 +1,16 @@
 @font-face {
+  font-family: 'logo';
+  font-display: swap;
+  src: url('//at.alicdn.com/t/webfont_brku4ahobqq.eot'); /* IE9*/
+  src: url('//at.alicdn.com/t/webfont_brku4ahobqq.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('//at.alicdn.com/t/webfont_brku4ahobqq.woff2') format('woff2'),
+  url('//at.alicdn.com/t/webfont_brku4ahobqq.woff') format('woff'), /* chrome、firefox */
+  url('//at.alicdn.com/t/webfont_brku4ahobqq.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/webfont_brku4ahobqq.svg#站酷高端黑') format('svg'); /* iOS 4.1- */
+}
+
+
+@font-face {
   font-family: 'iconfont';  
   src: url('//at.alicdn.com/t/font_2142143_l4331n4o25n.eot');
   src: url('//at.alicdn.com/t/font_2142143_l4331n4o25n.eot?#iefix') format('embedded-opentype'),
@@ -405,63 +417,85 @@ fieldset {
   }
 }
 .header {
-  height: 50px;
-  overflow: hidden;
-  border-bottom:1px solid #e0e0e0;
   background-color: $bgHeader;
   box-shadow:0px 0px 1px #ccc;
-  .logo {
-    .x1 {
-      margin-top: 10px;
-      height: 28px;
-      width: 15px;
-      float: left;
-      font-size: 16px;
-      line-height: 14px;
-      color: #fff;
-      background-color: $c1;
-      border-radius: 0px;
-    }
-    .x2 {
-      text-indent: 5px;
-      height: 50px;
-      width: auto;
-      line-height: 50px;
-      float: left;
-      font-size: 38px;
-      color: $c0;
-      letter-spacing: -2px;
+  border-bottom:1px solid #e0e0e0;
 
-    }
-
-    &.brand img{
-      height:50px;
-    }
-  }
-
-
-
-  a {
-    display: block;
+  .lv1 {
     height: 50px;
-    line-height: 50px;
-    margin: 0 12px;
-    float: left;
-    color: #555;
+    overflow: hidden;
+    
+    .logo {
+      font-family: "logo";
+      .x1 {
+        margin-top: 10px;
+        height: 28px;
+        width: 15px;
+        float: left;
+        font-size: 16px;
+        line-height: 14px;
+        color: #fff;
+        background-color: $c1;
+        border-radius: 0px;
+      }
+      .x2 {
+        text-indent: 5px;
+        height: 50px;
+        width: auto;
+        line-height: 50px;
+        float: left;
+        font-size: 38px;
+        color: $c0;
+        letter-spacing: -2px;
+
+      }
+
+      &.brand img{
+        height:50px;
+      }
+    }
+    a {
+      display: block;
+      height: 50px;
+      line-height: 50px;
+      margin: 0 12px;
+      float: left;
+      color: #555;
+    }
+    .login{
+      display:block;
+      float:right;
+    }
+    .panel{
+      display:block;
+      float:right;
+    }
   }
-  .login{
-    display:block;
-    float:right;
-  }
-  .panel{
-    display:block;
-    float:right;
+  .lv2 {
+    height: 36px;
+    overflow: hidden;
+    background-color: #eee;
+    box-shadow:0px 0px 1px #ccc;
+    border-top:1px solid #e0e0e0;
+    .pagen {
+      padding:0 10px;
+    }
+    a {
+      color:#777;
+      line-height:36px;
+      display:block;
+      height:36px;
+      padding:0 10px;
+      letter-spacing:2px;
+      border-right:1px solid #ddd;
+      float:left;
+      &.i0{
+        border-left:1px solid #ddd;
+      }
+    }
   }
 }
-.header .logo,
-.header .f24 {
-  font-weight: bold;
-}
+
 .pagen {
   &.md{
     max-width: 1600px;
