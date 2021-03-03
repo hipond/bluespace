@@ -422,7 +422,7 @@ fieldset {
   border-bottom:1px solid #e0e0e0;
 
   .lv1 {
-    height: 50px;
+    height: 40px;
     overflow: hidden;
     
     .logo {
@@ -440,9 +440,9 @@ fieldset {
       }
       .x2 {
         text-indent: 5px;
-        height: 50px;
+        height: 40px;
         width: auto;
-        line-height: 50px;
+        line-height: 40px;
         float: left;
         font-size: 38px;
         color: $c0;
@@ -451,13 +451,13 @@ fieldset {
       }
 
       &.brand img{
-        height:50px;
+        height:40px;
       }
     }
     a {
       display: block;
-      height: 50px;
-      line-height: 50px;
+      height: 40px;
+      line-height: 40px;
       margin: 0 12px;
       float: left;
       color: #555;
