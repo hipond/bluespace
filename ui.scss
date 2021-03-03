@@ -1,15 +1,4 @@
 @font-face {
-  font-family: 'logo';
-  font-display: swap;
-  src: url('//at.alicdn.com/t/webfont_brku4ahobqq.eot'); /* IE9*/
-  src: url('//at.alicdn.com/t/webfont_brku4ahobqq.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('//at.alicdn.com/t/webfont_brku4ahobqq.woff2') format('woff2'),
-  url('//at.alicdn.com/t/webfont_brku4ahobqq.woff') format('woff'), /* chrome、firefox */
-  url('//at.alicdn.com/t/webfont_brku4ahobqq.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-  url('//at.alicdn.com/t/webfont_brku4ahobqq.svg#站酷高端黑') format('svg'); /* iOS 4.1- */
-}
-
-@font-face {
   font-family: 'iconfont';  
   src: url('//at.alicdn.com/t/font_2142143_l4331n4o25n.eot');
   src: url('//at.alicdn.com/t/font_2142143_l4331n4o25n.eot?#iefix') format('embedded-opentype'),
@@ -471,7 +460,7 @@ fieldset {
 }
 .header .logo,
 .header .f24 {
-  font-family: "logo";
+  font-weight: bold;
 }
 .pagen {
   &.md{
