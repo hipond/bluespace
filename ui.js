@@ -337,10 +337,11 @@ gh.fn('editor', function(options) {
             //'video',
             'table',
             //'code',
-            'splitLine',
+            //'splitLine',
             'undo',
             'redo',
         ]
+        gh.editor.config.showFullScreen = false;
         gh.editor.config.fontNames = ['黑体', '仿宋', '楷体', '宋体', '微软雅黑'];
         gh.editor.config.colors = ['#ab2b2b', '#069', '#337d56', '#9d5b8b', '#dcb183', '#f0f0f0', '#000'];
         gh.editor.config.fontSizes = {
@@ -568,11 +569,11 @@ gh.run('com.common', function() {
         var $regionZone = $('.zone.region .tab.region');
         if (gh.regionPath.region) {
             var $regionKey = $regionZone.find('ul.thin li.key:contains(' + gh.regionPath.region + ')').addClass('focus');
-            $regionZone.children('.content').children('.item:eq('+$regionKey.index()+')').addClass('on');
+            $regionZone.children('.content').children('.item:eq(' + $regionKey.index() + ')').addClass('on');
         }
         if (gh.regionPath.province) {
             var $provinceKey = $regionZone.find('li.key:contains(' + gh.regionPath.province + ')').addClass('focus');
-            $provinceKey.closest('.tab.province').children('.content').children('.cities:eq('+$provinceKey.index()+')').addClass('on');
+            $provinceKey.closest('.tab.province').children('.content').children('.cities:eq(' + $provinceKey.index() + ')').addClass('on');
         }
         if (gh.regionPath.city) {
             $regionZone.find('a:contains(' + gh.regionPath.city + ')').addClass('focus');
@@ -581,16 +582,30 @@ gh.run('com.common', function() {
     }
 
     // 段落自折叠
-    $('.collapse.partial .wrapper').addClass('parting');
-    $('.collapse.partial .flag').on('click', function(event) {
-        var $wrapper = $(this).prev('.wrapper');
-        $wrapper.toggleClass('parting');
-        if($wrapper.hasClass('parting')){
-            $(this).text('---- 阅读全文 ----');
-        }else{
-            $(this).text('---- 折叠内容 ----');
+    $('.collapse.partial').each(function() {
+        var $wrapper = $(this).find('.wrapper');
+        var $flagger = $(this).find('.flagger');
+        var height = $wrapper.attr('collapse') || 180;
+        var textOn = '---- 阅读全文 ----';
+        var textOff = '---- 折叠内容 ----';
+        if ($wrapper.height() <= height) {
+            return;
         }
+        $wrapper.addClass('parting');
+        $wrapper.height(height);
+        $flagger.text(textOn);
+        $flagger.on('click', function() {
+            $wrapper.toggleClass('parting');
+            if ($wrapper.hasClass('parting')) {
+                $wrapper.height(height);
+                $(this).text(textOn);
+            } else {
+                $(this).text(textOff);
+                $wrapper.height('auto');
+            }
+        });
     });
+
 });
 
 // 标签渲染
