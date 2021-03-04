@@ -97,6 +97,7 @@ gh.alert = function(message, timeout, fn, type) {
         theme: 'future'
     }
     var type = (type == 1 || type == 'success') ? 'success' : 'error';
+
     Messenger().post({
         message: message,
         type: type,
@@ -281,7 +282,7 @@ gh.data = function(element) {
 gh.post = function(url, data, timeout, redirect) {
     $.post(gh.path(url), data, function(response) {
         if (response.state === 1) {
-            var timeout = response.data.timeout || timeout || 1500;
+            var timeout = response.data.timeout || timeout || 1.5;
             gh.alert(response.message, timeout, function() {
                 var redirect = redirect || response.data.location;
                 if (redirect && redirect != '#') {
@@ -311,7 +312,7 @@ gh.runPostFlow = function($btn) {
             gh.alert('error.btn.api');
         }
         var data = $btn.hasClass('empty') ? {} : gh.data($btn.closest('.form'));
-        var timeout = $btn.attr('timeout') || 1500;
+        var timeout = $btn.attr('timeout') || 1.5;
         var redirect = $btn.attr('redirect') || null;
         if (!data) {
             return false;
