@@ -132,11 +132,7 @@ td:not([align]),
 th:not([align]) {
   text-align: left;
 }
-.scroll-x{
-  display: -webkit-box;
-  overflow-x: scroll;
-  -webkit-overflow-scrolling:touch;
-}
+
 /*色系*/
 .b0 {
   background-color: #000 !important;
@@ -489,7 +485,6 @@ fieldset {
     overflow:hidden;
     .pagen {
       padding:0 10px;
-      height: 36px;
     }
     a {
       color:#777;

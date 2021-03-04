@@ -658,6 +658,10 @@ gh.run('com.common', function() {
         $('.lv2 .pagen').addClass('scroll-x');
     }
 
+    if(gh.debug){
+        $('.footer .statement').append('ua:'+navigator.userAgent);
+    }
+
 });
 
 // 标签渲染
