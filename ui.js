@@ -656,7 +656,9 @@ gh.run('com.common', function() {
 
     // 菜单自滚动
     if (gh.ua.isMobile()) {
-        $('.lv2 .pagen').addClass('scroll-x');
+        var $lv2 = $('.lv2');
+        $lv2.addClass('scroll-x');
+        $lv2.find('.pagen').width(6000);
     }
 
     if(gh.debug){
