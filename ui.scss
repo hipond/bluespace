@@ -132,6 +132,11 @@ td:not([align]),
 th:not([align]) {
   text-align: left;
 }
+.scroll-x{
+  display: -webkit-box;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling:touch;
+}
 /*色系*/
 .b0 {
   background-color: #000 !important;
@@ -271,6 +276,11 @@ th:not([align]) {
   border:1px solid $bgBorder;
   background-color: #fff;
   box-shadow:0px 0px 1px #ccc;
+  div.info{
+    color:#333;
+    margin:10px 0;
+    font-size:14px;
+  }
 }
 /*位序*/
 .h,
@@ -473,12 +483,13 @@ fieldset {
   }
   .lv2 {
     height: 36px;
-    overflow: hidden;
     background-color: #eee;
     box-shadow:0px 0px 1px #ccc;
     border-top:1px solid #e0e0e0;
+    overflow:hidden;
     .pagen {
       padding:0 10px;
+      height: 36px;
     }
     a {
       color:#777;
@@ -1088,17 +1099,18 @@ h1 {
 #toc:hover {
   overflow: auto;
 }
-.collapse.partial .parting{
-  overflow:hidden;
-  text-align:center;
-}
 
 
-.collapse.partial .flagger{
-  cursor:pointer;
-  line-height:40px;
-  color:#999;
-  text-align:center;
+.collapse.partial {
+  .flagger.a{
+    cursor:pointer;
+    color:#999;
+  }
+  .flagger.b{
+    cursor:pointer;
+    color:#999;
+    text-align:center;
+  }
 }
 
 .textarea.editor.comment{

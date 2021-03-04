@@ -53,6 +53,44 @@ gh.cdn = function(path) {
     }
     return gh.cdnPublicRoot + path;
 }
+gh.isPC = function() {
+    var system = {
+        win: false,
+        mac: false,
+        xll: false,
+        ipad: false
+    };
+
+    var platform = navigator.platform;
+
+    system.win = platform.indexOf("Win") == 0;
+    system.mac = platform.indexOf("Mac") == 0;
+    system.x11 = (platform == "X11") || (platform.indexOf("Linux") == 0);
+    system.ipad = (navigator.userAgent.match(/iPad/i) != null) ? true : false;
+
+    if (system.win || system.mac || system.xll || system.ipad) {
+        return true;
+    }
+    return false;
+}
+gh.ua = {
+    isAndroid: function() {
+        return navigator.userAgent.match(/Android/i) ? true : false;
+    },
+    isBlackBerry: function() {
+        return navigator.userAgent.match(/BlackBerry/i) ? true : false;
+    },
+    isIOS: function() {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i) ? true : false;
+    },
+    isWindowsMobile: function() {
+        return navigator.userAgent.match(/IEMobile/i) ? true : false;
+    },
+    isMobile: function() {
+        return (gh.ua.isAndroid() || gh.ua.isBlackBerry() || gh.ua.isIOS() || gh.ua.isWindowsMobile());
+    }
+}
+
 gh.alert = function(message, timeout, fn, type) {
     Messenger.options = {
         extraClasses: 'messenger-fixed messenger-on-top',
@@ -341,6 +379,9 @@ gh.fn('editor', function(options) {
             'undo',
             'redo',
         ]
+        if (gh.ua.isMobile()) {
+            gh.editor.config.menus = [];
+        }
         gh.editor.config.showFullScreen = false;
         gh.editor.config.fontNames = ['黑体', '仿宋', '楷体', '宋体', '微软雅黑'];
         gh.editor.config.colors = ['#ab2b2b', '#069', '#337d56', '#9d5b8b', '#dcb183', '#f0f0f0', '#000'];
@@ -583,28 +624,39 @@ gh.run('com.common', function() {
 
     // 段落自折叠
     $('.collapse.partial').each(function() {
-        var $wrapper = $(this).find('.wrapper');
-        var $flagger = $(this).find('.flagger');
-        var height = $wrapper.attr('collapse') || 180;
-        var textOn = '---- 阅读全文 ----';
-        var textOff = '---- 折叠内容 ----';
-        if ($wrapper.height() <= height) {
+        var $wrapper = $(this);
+        var $desciption = $(this).find('.a');
+        var $content = $(this).find('.b');
+        $desciption.show();
+        $content.hide();
+
+        if ($desciption.text() == $content.text()) {
             return;
         }
-        $wrapper.addClass('parting');
-        $wrapper.height(height);
-        $flagger.text(textOn);
-        $flagger.on('click', function() {
-            $wrapper.toggleClass('parting');
-            if ($wrapper.hasClass('parting')) {
-                $wrapper.height(height);
-                $(this).text(textOn);
-            } else {
-                $(this).text(textOff);
-                $wrapper.height('auto');
-            }
+
+        $desciption.append("<span class='flagger a'> ...全文</span>");
+        $content.last().after("<div class='flagger b'> ===== 折叠 ===== </div>");
+
+        var $flaggerA = $desciption.find('.flagger.a');
+        var $flaggerB = $wrapper.find('.flagger.b');
+        $flaggerB.hide();
+
+        $flaggerA.on('click', function() {
+            $desciption.hide();
+            $content.show();
+            $flaggerB.show();
+        });
+        $flaggerB.on('click', function() {
+            $desciption.show();
+            $content.hide();
+            $flaggerB.hide();
         });
     });
+
+    // 菜单自滚动
+    if (gh.ua.isMobile()) {
+        $('.lv2 .pagen').addClass('scroll-x');
+    }
 
 });
 
