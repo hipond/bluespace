@@ -603,7 +603,12 @@ gh.run('com.common', function() {
 
     }
     $('.zone.footer .statement').html("");
-    $('.zone.breadcrumb').after(gh.segments.region);
+    var $breadcrumb = $('.zone.breadcrumb');
+    if($breadcrumb.length>0){
+        $breadcrumb.after(gh.segments.region);
+    }else{
+        $('div.body.pagen').prepend(gh.segments.region);
+    }
     if (gh.regionPath) {
         if (gh.regionPath.collapse) {
             $('.zone.region').addClass('optional menu hide');
