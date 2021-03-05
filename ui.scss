@@ -12,12 +12,12 @@
 
 @font-face {
   font-family: 'iconfont'; 
-  src: url('//at.alicdn.com/t/font_2142143_hth0dmv6e3e.eot');
-  src: url('//at.alicdn.com/t/font_2142143_hth0dmv6e3e.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_2142143_hth0dmv6e3e.woff2') format('woff2'),
-  url('//at.alicdn.com/t/font_2142143_hth0dmv6e3e.woff') format('woff'),
-  url('//at.alicdn.com/t/font_2142143_hth0dmv6e3e.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_2142143_hth0dmv6e3e.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_2142143_ratlahatejs.eot');
+  src: url('//at.alicdn.com/t/font_2142143_ratlahatejs.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_2142143_ratlahatejs.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_2142143_ratlahatejs.woff') format('woff'),
+  url('//at.alicdn.com/t/font_2142143_ratlahatejs.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_2142143_ratlahatejs.svg#iconfont') format('svg');
 }
 
 article,
@@ -268,8 +268,8 @@ th:not([align]) {
 }
 .ease {
   padding: 12px;
-  border-radius: 4px;
-  border:1px solid $bgBorder;
+  border-radius: 6px;
+  border:1px solid #ddd;
   background-color: #fff;
   box-shadow:0px 0px 3px #ddd;
   div.info{
@@ -296,7 +296,7 @@ body {
   background-color: $bg;
   color: $c0;
   font-size: 16px;
-  font-family: 微软雅黑, "Droid Sans", Helvetica, Tahoma, SimSun, sans-serif;
+  font-family: 方正兰亭中黑简体,"Microsoft Yahei", "PingFang SC", Avenir, "Segoe UI", "Hiragino Sans GB", STHeiti, "Microsoft Sans Serif", "WenQuanYi Micro Hei", sans-serif;
   font-style: normal;
   font-variant-ligatures: normal;
   font-variant-caps: normal;
@@ -346,12 +346,18 @@ form label.ui,
   margin-right: 20px;
 }
 legend {
-  font-size: 16px;
+    font-size: 12px;
+    color: #eee;
+    box-shadow: 0px -1px 4px #e6e6e6;
+    background: #777;
+    border-radius: 40px 40px 40px 2px;
+    padding: 0px 6px;
+    border: 1px solid #ddd;
+    letter-spacing: 2px;
 }
 textarea {
   padding: 10px;
   border: 1px solid $bgBorder;
-  min-width: 300px;
   min-height: 100px;
   background-color: #fff;
   color: #222;
@@ -375,17 +381,19 @@ textarea {
 .btn {
   display: inline-block;
   background-color: $bgBtn;
-  border-radius: 3px;
+  border-radius: 2px;
   border: 1px solid #ddd;
   cursor: pointer;
-  padding: 2px 6px !important;
+  padding: 1px 6px !important;
   margin: 5px;
   color: $c0;
   vertical-align: middle;
+  letter-spacing: 1px;
   &.focus {
     background-color: $c1 !important;
     color: #f0f0f0 !important;
     border: 1px solid $c1;
+    box-shadow: 1px 1px 5px #ccc;
   }
   &.off {
     background-color: #999 !important;
@@ -414,6 +422,9 @@ fieldset {
   overflow-x:scroll;
   -webkit-overflow-scrolling:touch;
 }
+body.breadcrumbOff .header{
+  margin-bottom:30px;
+}
 .zone.tree {
   .ease{
     background-color: #f4f8fa;
@@ -432,12 +443,13 @@ fieldset {
 }
 .header {
   background-color: $bgHeader;
-  box-shadow:0px 0px 1px #ccc;
-  border-bottom:1px solid #e0e0e0;
-
+  box-shadow: 1px 1px 5px 2px #ddd;
+  border-bottom:1px solid #ccc;
+  overflow:hidden;
   .lv1 {
     height: 40px;
     overflow: hidden;
+    border-bottom: 1px solid #ccc;
     
     .logo {
       font-family: "logo";
@@ -466,6 +478,7 @@ fieldset {
 
       &.brand img{
         height:40px;
+        margin-top: 3px;
       }
     }
     a {
@@ -494,8 +507,7 @@ fieldset {
   .lv2 {
     height: 36px;
     background-color: #eee;
-    box-shadow:0px 2px 6px #ccc;
-    border-top:1px solid #e0e0e0;
+    box-shadow: 2px 2px 15px 1px #dfdddd;
     .pagen {
       height: 36px;
       padding:0 10px;
@@ -515,8 +527,8 @@ fieldset {
         border-left:1px solid #ddd;
       }
       &.in{
-        background-color: #fff;
-        color:#666;
+        background-color: #555;
+        color: #eee;
       }
     }
   }
@@ -530,7 +542,7 @@ fieldset {
   margin: 0 auto;
 }
 .zone {
-  margin: 30px 10px;
+  margin: 0 10px 30px 10px;
   &.breadcrumb {
     margin: 15px 10px;
     color: $bgBorder;
@@ -548,7 +560,7 @@ fieldset {
   }
   &.menu {
     .ease {
-      border-radius: 0px;
+      border-radius: 6px;
     }
   }
   &.topic {
@@ -684,7 +696,7 @@ fieldset {
   &.area {
     .ease {
       h2 {
-        margin: 40px 0 10px 10px;
+        margin: 20px 0 10px 10px;
       }
     }
   }
@@ -718,13 +730,17 @@ fieldset {
     }
   }
 }
-.footer {
-  margin-top:50px;
+.zone.footer {
+  background-color: #555;
+  margin:50px 0 0 0;
+  padding:20px 0;
   text-align: center;
+  box-shadow: inset 0px 5px 5px 0px #444;
   * {
     font-size: 12px!important;
-    color: #777;
+    color: #eee;
     line-height: 16px;
+    letter-spacing:1px;
   }
 }
 .tag {
@@ -762,6 +778,16 @@ div {
       color:$c0;
     }
   }
+}
+.zone.topics .ease{
+  padding:20px 20px;
+  .created_at{
+    font-size: 13px;
+    color: #777;
+  }
+}
+.mob .zone.topics .ease{
+  padding:20px 12px;
 }
 .zone.topics .p.even,
 .zone.comments .p.even {
@@ -812,6 +838,10 @@ div {
     }
   }
   &.region {
+    *{
+      line-height: 30px;
+      vertical-align: middle;
+    }
     .head {
       padding: 10px;
     }
@@ -831,20 +861,22 @@ div {
         }
       }
     }
+    a{
+      display: inline-block;
+    }
   }
   &.province {
     .content {
       padding: 10px;
       .item {
         a {
-          padding: 2px 0 2px 0;
           margin-right: 5px;
-          line-height: 30px;
         }
       }
     }
     .head {
       padding: 0 0 0 10px;
+      background: #f4f8fa;
     }
   }
 }
@@ -1144,12 +1176,12 @@ h1 {
     .avatar.src{
       border: 3px solid $bgBtn;
       border-radius: 300px;
-      background-color: $c1;
+      background-color: #f6f6f6;
       box-shadow: 0 0 5px #555 inset;
       margin:0 0 0 36px;
     }
     .profile{
-      padding:10px 20px;
+      padding:10px 0;
       .textarea{
         width:100%;
         height:120px;
@@ -1158,4 +1190,21 @@ h1 {
     }
   }
   
+}
+.zone.card {
+  .ease{
+    padding:25px 12px;
+    a.link{
+      color:#777;
+      vertical-align: middle;
+    }
+  }
+}
+
+.pager{
+  margin:20px 0;
+  *{
+    font-size:14px;
+    padding: 0px 6px!important;
+  }
 }

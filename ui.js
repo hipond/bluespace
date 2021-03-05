@@ -661,8 +661,8 @@ gh.run('com.common', function() {
         $lv2.find('.pagen').width(6000);
     }
 
-    if(gh.debug){
-        $('.footer .statement').append('ua:'+navigator.userAgent);
+    if (gh.debug) {
+        //$('.footer .statement').append('ua:' + navigator.userAgent);
     }
 
 });
@@ -735,10 +735,10 @@ gh.run('com.form', function() {
     var auto = function() {
         $('.input.ui').each(function() {
             var $input = $(this);
-            var $parent = $input.closest('.pagen');
-            var $label = $parent.children('label,.label').first();
-            var offset = $label.width() || 150;
-            var toWidth = $parent.width() - offset - 50;
+            var parentWidth = $input.parent().width() || $input.closest('.pagen').width() - 80;
+            var $label = $input.siblings('label,.label');
+            var offset = $label.width() || 80;
+            var toWidth = parentWidth - offset - 50;
             $input.width(toWidth);
         });
 
