@@ -434,7 +434,7 @@ body.breadcrumbOff .header{
 .zone.tree {
   .ease{
     background-color: #f4f8fa;
-    border-radius:10px 0px 4px 4px;
+    border-radius:10px 10px 4px 4px;
     &.bg{
       background-position: 100% 0px;
       background-repeat: no-repeat;
@@ -454,7 +454,7 @@ body.breadcrumbOff .header{
 }
 .header {
   background-color: $bgHeader;
-  box-shadow: 1px 1px 5px 2px #ccc;
+  box-shadow: 1px 1px 7px 2px #ddd;
   overflow:hidden;
   height: 76px;
   .lv1 {
@@ -517,7 +517,7 @@ body.breadcrumbOff .header{
     height: 36px;
     background-color: #eee;
     border-bottom:1px solid #ccc;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #ddd;
     .pagen {
       height: 36px;
       padding:0 10px;
@@ -794,7 +794,7 @@ div {
   .created_at{
     font-size: 13px;
     color: #777;
-    word-break: keep-all;
+    display: inline-block;
   }
 }
 .mob .zone.topics .ease{
@@ -1220,5 +1220,6 @@ h1 {
   }
 }
 .zone.region .ease{
+  background-color:#f3f8fa;
 }
 
