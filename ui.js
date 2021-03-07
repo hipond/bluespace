@@ -604,9 +604,9 @@ gh.run('com.common', function() {
     }
     $('.zone.footer .statement').html("");
     var $breadcrumb = $('.zone.breadcrumb');
-    if($breadcrumb.length>0){
+    if ($breadcrumb.length > 0) {
         $breadcrumb.after(gh.segments.region);
-    }else{
+    } else {
         $('div.body.pagen').prepend(gh.segments.region);
     }
     if (gh.regionPath) {
@@ -664,6 +664,12 @@ gh.run('com.common', function() {
         var $lv2 = $('.lv2');
         $lv2.addClass('scroll-x');
         $lv2.find('.pagen').width(6000);
+    }
+
+    var $tree = $('.zone.tree .ease');
+    if ($tree.attr('bg')) {
+        $tree.addClass('bg');
+        $tree.css({ 'background-image': 'url(' + $tree.attr('bg') + ')' });
     }
 
     if (gh.debug) {
