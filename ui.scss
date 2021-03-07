@@ -454,13 +454,12 @@ body.breadcrumbOff .header{
 }
 .header {
   background-color: $bgHeader;
-  box-shadow: 1px 1px 5px 2px #ddd;
-  border-bottom:1px solid #ccc;
+  box-shadow: 1px 1px 5px 2px #ccc;
   overflow:hidden;
+  height: 76px;
   .lv1 {
     height: 40px;
     overflow: hidden;
-    border-bottom: 1px solid #ccc;
     
     .logo {
       font-family: "logo";
@@ -517,7 +516,8 @@ body.breadcrumbOff .header{
   .lv2 {
     height: 36px;
     background-color: #eee;
-    box-shadow: 2px 2px 15px 1px #dfdddd;
+    border-bottom:1px solid #ccc;
+    border-top: 1px solid #ccc;
     .pagen {
       height: 36px;
       padding:0 10px;
@@ -794,6 +794,7 @@ div {
   .created_at{
     font-size: 13px;
     color: #777;
+    word-break: keep-all;
   }
 }
 .mob .zone.topics .ease{
@@ -886,7 +887,6 @@ div {
     }
     .head {
       padding: 0 0 0 10px;
-      background: #f4f8fa;
     }
   }
 }
@@ -959,8 +959,8 @@ div {
   display: block;
   font-size: 18px;
   text-align: center;
-  color: $c2;
-  border: 2px solid $c2;
+  color: #d70419;
+  border: 2px solid #d70419;
   width: 40px;
   height: 25px;
   line-height: 23px;
