@@ -88,6 +88,14 @@ gh.ua = {
     },
     isMobile: function() {
         return (gh.ua.isAndroid() || gh.ua.isBlackBerry() || gh.ua.isIOS() || gh.ua.isWindowsMobile());
+    },
+    isWeixin: function() {
+        var ua = navigator.userAgent.toLowerCase();
+        if (ua.match(/MicroMessenger/i) == "micromessenger") {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
 
@@ -664,6 +672,10 @@ gh.run('com.common', function() {
         var $lv2 = $('.lv2');
         $lv2.addClass('scroll-x');
         $lv2.find('.pagen').width(6000);
+    }
+
+    if (gh.ua.isWeixin()) {
+        $('body').addClass('ua-weixin');
     }
 
     var $tree = $('.zone.tree .ease');
