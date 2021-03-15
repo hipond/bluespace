@@ -431,7 +431,7 @@ fieldset {
 
 .zone.tree {
   .ease{
-    background-color: #f3f5fa;
+    background-color: #f8fffe;
     border-radius:10px 10px 4px 4px;
     &.bg{
       background-position: 100% 0px;
@@ -455,6 +455,7 @@ fieldset {
   height: 40px;
   overflow: hidden;
   box-shadow: 0px 2px 5px 0px #ddd;
+  background-color: #fff;
   
   .logo {
     font-family: "logo";
@@ -484,9 +485,9 @@ fieldset {
     &.brand img{
       height:40px;
       background-color: #f8f8f8;
-      box-shadow: 0px 3px 5px 0px #bbb;
+      box-shadow: 0px 20px 4px 0px #888;
       padding: 0 5px;
-      border-radius: 5px 4px 0 0;
+      border-radius: 6px 6px 0 0;
     }
   }
   a {
@@ -518,8 +519,8 @@ fieldset {
 
 .lv2 {
   margin-bottom:15px;
-  border-bottom:1px solid #ddd;
-  border-top: 1px solid #ddd;
+  border-bottom:1px #ddd solid;
+  border-top: 1px #ddd solid;
   box-shadow: 0px 1px 5px 0px #ddd;
   background-color: #e6e6e6;
   .pagen {
@@ -528,8 +529,7 @@ fieldset {
     width: 1000px;
   }
   a {
-    color:#777;
-    background-color: #eee;
+    margin:0;
     line-height:38px;
     vertical-align: middle;
     display:block;
@@ -544,6 +544,10 @@ fieldset {
     &.in{
       background-color: $c1;
       color: #eee;
+    }
+    &.off{
+      color:#777;
+      background-color: #eee;
     }
   }
 }
@@ -996,6 +1000,14 @@ div {
   }
 }
 .mob {
+  .lv1{
+    background-color: #fff;
+  }
+  .lv2{
+    .pagen{
+      padding:0px;
+    }
+  }
   .ease.pd20{
     padding:10px!important;
   }
@@ -1228,18 +1240,35 @@ h1 {
 }
 
 .pager{
-  margin:20px 0;
+  margin:20px 0 0 0;
   *{
     font-size:14px;
     padding: 0px 6px!important;
   }
 }
 .zone.region .ease{
-  background-color:#f3f5fa;
+  background-color:#f8fffe;
 }
 
 .ua-weixin{
   .lv1 {
     background-color: #ededed;
+  }
+}
+
+.scope1 {
+  .lv1 {
+    background-image: url(../img/grassland.png);
+    background-size: 200px;
+    background-repeat: repeat-x;
+    background-position: 0 28px;
+    background-color: #fff;
+
+    .pagen{
+      background-image: url(../img/football.png);
+      background-size: 36px;
+      background-repeat: no-repeat;
+      background-position: 146px 13px;
+    }
   }
 }

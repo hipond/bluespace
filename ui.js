@@ -570,7 +570,8 @@ gh.run('com.common', function() {
         });
     });
     $('img').error(function() {
-        $(this).hide();
+        $(this).attr('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAGElEQVQImWP8////fwYkwITMIUKAgYEBAAZdBAQD2YmbAAAAAElFTkSuQmCC');
+        //$(this).hide();
     });
 
     if (location.pathname == '/') {
