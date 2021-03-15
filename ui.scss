@@ -428,9 +428,7 @@ fieldset {
   overflow-x:scroll;
   -webkit-overflow-scrolling:touch;
 }
-body.breadcrumbOff .header{
-  margin-bottom:30px;
-}
+
 .zone.tree {
   .ease{
     background-color: #f4f8fa;
@@ -452,94 +450,93 @@ body.breadcrumbOff .header{
     }
   }
 }
-.header {
-  background-color: $bgHeader;
-  box-shadow: 1px 1px 7px 2px #ddd;
-  overflow:hidden;
-  height: 76px;
-  .lv1 {
-    height: 40px;
-    overflow: hidden;
-    
-    .logo {
-      font-family: "logo";
-      .x1 {
-        margin-top: 10px;
-        height: 28px;
-        width: 15px;
-        float: left;
-        font-size: 16px;
-        line-height: 14px;
-        color: #fff;
-        background-color: $c1;
-        border-radius: 0px;
-      }
-      .x2 {
-        text-indent: 5px;
-        height: 40px;
-        width: auto;
-        line-height: 40px;
-        float: left;
-        font-size: 38px;
-        color: $c0;
-        letter-spacing: -2px;
-
-      }
-
-      &.brand img{
-        height:40px;
-      }
-    }
-    a {
-      display: block;
-      height: 40px;
-      line-height: 40px;
-      margin: 0 12px;
+.lv1 {
+  height: 40px;
+  overflow: hidden;
+  background-color: #fff;
+  
+  .logo {
+    font-family: "logo";
+    .x1 {
+      margin-top: 10px;
+      height: 28px;
+      width: 15px;
       float: left;
-      color: #555;
+      font-size: 16px;
+      line-height: 14px;
+      color: #fff;
+      background-color: $c1;
+      border-radius: 0px;
     }
-    .login{
-      display:block;
-      float:right;
+    .x2 {
+      text-indent: 5px;
+      height: 40px;
+      width: auto;
+      line-height: 40px;
+      float: left;
+      font-size: 38px;
+      color: $c0;
+      letter-spacing: -2px;
+
     }
-    .panel{
-      display:block;
-      float:right;
-      .avatar{
-        border: 2px solid $bgBtn;
-        border-radius: 300px;
-        background-color: #ccc;
-        box-shadow: 0 0 5px #555 inset;
-      }
+
+    &.brand img{
+      height:40px;
     }
   }
-  .lv2 {
-    height: 36px;
-    background-color: #eee;
-    border-bottom:1px solid #ccc;
-    border-top: 1px solid #ddd;
-    .pagen {
-      height: 36px;
-      padding:0 10px;
-      width: 1000px;
+  a {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 12px;
+    float: left;
+    color: #555;
+  }
+  .login{
+    display:block;
+    float:right;
+  }
+  .panel{
+    display:block;
+    float:right;
+    .avatar{
+      border: 2px solid $bgBtn;
+      border-radius: 300px;
+      background-color: #ccc;
+      box-shadow: 0 0 5px #555 inset;
     }
-    a {
-      color:#777;
-      line-height:36px;
-      vertical-align: middle;
-      display:block;
-      height:36px;
-      padding:0 10px;
-      letter-spacing:2px;
-      border-right:1px solid #ddd;
-      float:left;
-      &.i0{
-        border-left:1px solid #ddd;
-      }
-      &.in{
-        background-color: #555;
-        color: #eee;
-      }
+  }
+}
+body.breadcrumbOff .lv2{
+  margin-bottom:30px;
+}
+.lv2 {
+  margin-bottom:15px;
+  border-bottom:1px solid #ddd;
+  border-top: 1px solid #ddd;
+  box-shadow: 0px 1px 5px 0px #ddd;
+  .pagen {
+    height: 36px;
+    padding:0 10px;
+    width: 1000px;
+  }
+  a {
+    color:#777;
+    background-color: #eee;
+    line-height:38px;
+    vertical-align: middle;
+    display:block;
+    height:36px;
+    padding:0 10px;
+    letter-spacing:2px;
+    border-right:1px solid #ddd;
+    float:left;
+    &.i0{
+      border-left:1px solid #ddd;
+    }
+    &.in{
+      background-color: $c1;
+      color: #eee;
     }
   }
 }
@@ -554,7 +551,7 @@ body.breadcrumbOff .header{
 .zone {
   margin: 0 10px 30px 10px;
   &.breadcrumb {
-    margin: 15px 10px;
+    margin: 0 10px 15px 10px;
     color: $bgBorder;
     a {
       margin: 0 0 0 5px;
@@ -747,12 +744,12 @@ body.breadcrumbOff .header{
 .zone.footer {
   background-color: #555;
   margin:50px 0 0 0;
-  padding:20px 0;
+  padding:15px 0;
   text-align: center;
   box-shadow: inset 0px 5px 5px 0px #444;
   * {
     font-size: 12px!important;
-    color: #eee;
+    color: #bbb;
     line-height: 16px;
     letter-spacing:1px;
   }
@@ -989,6 +986,9 @@ div {
   }
 }
 .mob {
+  .ease.pd20{
+    padding:10px!important;
+  }
   .topic {
     .content {
       padding: 15px 10px;
@@ -1229,7 +1229,7 @@ h1 {
 }
 
 .ua-weixin{
-  .header {
+  .lv1 {
     background-color: #ededed;
   }
 }
