@@ -293,7 +293,6 @@ th:not([align]) {
   clear: both;
 }
 body {
-  background-color: $bg;
   color: $c0;
   font-size: 16px;
   font-family: 方正兰亭中黑简体,"Microsoft Yahei", "PingFang SC", Avenir, "Segoe UI", "Hiragino Sans GB", STHeiti, "Microsoft Sans Serif", "WenQuanYi Micro Hei", sans-serif;
@@ -307,6 +306,8 @@ body {
   line-height: 24px;
   word-break: break-all;
   background-repeat: repeat;
+  background-color: #eee;
+  background-image: url(../img/whitey.jpg);
   a {
     color: $c0;
     text-decoration: none;
