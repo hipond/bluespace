@@ -547,6 +547,9 @@ gh.fn('imageUploader', function(options) {
 // 基础组件渲染
 gh.run('com.common', function() {
     $('.zone.breadcrumb a').not(':first').before('|');
+    if($('.zone.breadcrumb').length <=0){
+        $('.body.pagen').addClass('breadcrumbOff');
+    }
     $('a[href=]').removeAttr('href');
     $('.body.pagen').css({ "min-height": $(window).height() - 160 });
     // $('.super').each(function() {
